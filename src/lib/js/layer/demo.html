@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>layer-更懂你的web弹窗解决方案</title>
+<script src="layer/jquery-2.1.0.js"></script>
+<script src="layer/layer.js"></script>
+
+<style>
+html{background-color:#E3E3E3; font-size:14px; color:#000; font-family:'微软雅黑'}
+
+</style>
+</head>
+<body>
+    <button type="button" id="test1">课程评价</button>
+
+<script>
+$('#test1').on('click', function(){
+    layer.msg('Hello layer');
+});
+</script>
+</body>
+</html>

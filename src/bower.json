@@ -1,0 +1,29 @@
+{
+  "name": "study",
+  "description": "基于fis3的纯前端解决方案，拿来即用的fis3脚手架。",
+  "main": "fis-conf.js",
+  "authors": [
+    "wzh"
+  ],
+  "license": [
+    null
+  ],
+  "keywords": [
+    "wzh"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./lib/js",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "vue": "^2.1.8",
+    "animate.css": "^3.5.2"
+  }
+}

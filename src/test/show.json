@@ -1,0 +1,77 @@
+{
+    "Id": 23,
+    "Name": "老师批卷测试",
+    "ExamLength": 99,
+    "IsFirstAnswer": false,
+    "PassScore": 2,
+    "TotalScore": 3,
+    "QuestionsItems": [{
+        "SimpleItem": [],
+        "GroupItem": [{
+            "SimpleItem": [{
+                "Id": 1,
+                "Text": "1"
+            }, {
+                "Id": 2,
+                "Text": "1"
+            }],
+            "Id": 0,
+            "Type": 2,
+            "Title": "单选题",
+            "Score": 1,总分
+            "GetScore": 0,得分
+            "IsShowAnswer": false,是否展示答案
+            "StudentAnswer": "",//学生答案
+            "Answer": "1",正确答案
+            "IsCorrect": false 是否正确
+        }, {
+            "SimpleItem": [],
+            "Id": 1,
+            "Type": 1,
+            "Title": "我是综合题里面的主观题，我是综合题里面的主观题",
+            "Score": 1,
+            "GetScore": 0,
+            "IsShowAnswer": false,
+            "StudentAnswer": "主观题\n\n",
+            "Answer": "主观题",
+            "IsCorrect": false
+        }],
+        "Id": 19,
+        "Type": 7,
+        "Title": "<p>这是一道综合题目，里面又包含一道主观题<br/></p>",
+        "Score": 2,
+        "GetScore": 0,
+        "IsShowAnswer": false,
+        "StudentAnswer": null,
+        "Answer": null,
+        "IsCorrect": true
+    }, {
+        "SimpleItem": [{
+            "Id": 1,
+            "Text": "1"
+        }, {
+            "Id": 2,
+            "Text": "2"
+        }, {
+            "Id": 3,
+            "Text": "3"
+        }],
+        "GroupItem": [],
+        "Id": 20,
+        "Type": 2,
+        "Title": "<p>单选答案是1</p>",
+        "Score": 1,
+        "GetScore": 0,
+        "IsShowAnswer": false,
+        "StudentAnswer": "1",
+        "Answer": "1",
+        "IsCorrect": true
+    }],
+    "QuestionsTypes": [{
+        "Value": "7",
+        "DisplayText": "综合题"
+    }, {
+        "Value": "2",
+        "DisplayText": "单选题"
+    }]
+}

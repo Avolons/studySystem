@@ -1,0 +1,501 @@
+.content {
+    width: 100%;
+    background-color: #ffffff;
+}
+// 固定的头部
+
+#fix-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: #ffffff;
+    width: 100%;
+}
+//头部
+//******单题显示状态
+.buttoncoll{
+  height: 35px;
+  padding-left: 15px;
+  >{
+    button{
+      height: 100%;
+      width: 105px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+      background-color: #e4282c;
+      margin-right: 20px;
+      &:hover{
+        background-color: #f5565a;
+      }
+    }
+  }
+}
+//******特殊情况一，单题不可逆
+.single{
+  #examtype{
+    >ul{
+      display: none;
+    }
+    >.buttoncoll{
+      button:first-of-type{
+        display: none;
+      }
+    }
+  }
+}
+
+
+
+//******特殊情况一，单题可逆
+.singleback{
+  #examtype{
+    >ul{
+      display: none;
+    }
+  }
+}
+
+
+
+
+#header {
+    position: relative;
+
+    > .title {
+        font-size: 30px;
+        color: #414141;
+        line-height: 110px;
+        text-align: center;
+
+        > time {
+            position: absolute;
+            bottom: 10px;
+            right: 35px;
+            font-size: 14px;
+            color: #414141;
+            height: 50px;
+            line-height: 50px;
+
+            > b {
+                color: #e4282c;
+                font-size: 38px;
+                line-height: 50px;
+            }
+        }
+    }
+
+    > p {
+        display: none;
+        margin: 0;
+        padding-bottom: 30px;
+        font-size: 12px;
+        text-align: center;
+        color: #7f7f7f;
+    }
+}
+//得分展示区域，最初为隐藏状态
+
+#scorearea {
+    display: none;
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px dashed #c3c3c3;
+    padding: 15px 0;
+    // 你的得分
+    > .allscore {
+        float: left;
+        height: 320px;
+        width: 300px;
+        border: 1px solid #cec8c8;
+        box-sizing: border-box;
+
+        h2 {
+            font-weight: 400;
+            width: 100%;
+            height: 65px;
+            line-height: 65px;
+            color: #2a2a2a;
+            font-size: 18px;
+            text-indent: 35px;
+        }
+
+        h3 {
+            font-weight: 400;
+            background-color: #fef8f8;
+            height: calc(100% - 65px);
+            text-align: center;
+            color: #2a2a2a;
+            font-size: 18px;
+
+            > span {
+                text-align: left;
+                color: #2a2a2a;
+                font-size: 18px;
+                text-indent: 35px;
+                display: block;
+                height: 65px;
+                line-height: 65px;
+            }
+
+            > b {
+                font-weight: 200;
+                color: #f28e2d;
+                font-size: 185px;
+                line-height: 185px;
+            }
+        }
+    }
+    // 得分列表
+    > .scoreList {
+        height: 350px;
+        width: 880px;
+        float: right;
+        box-sizing: border-box;
+        border: 1px solid #d2d2d2;
+        border-right: none;
+        background-color: #f6f6f6;
+
+        > ul {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+            > li {
+                flex-grow: 1;
+                height: 100%;
+                box-sizing: border-box;
+                border-right: 1px solid #d2d2d2;
+
+                > ul {
+                    height: 100%;
+                }
+
+                li {
+                    text-align: center;
+                    height: 20%;
+                    font-size: 18px;
+                    line-height: 70px;
+                    color: #2a2a2a;
+                }
+
+                :nth-of-type(4),
+                li:nth-of-type(2) {
+                    background-color: #ffffff;
+                }
+            }
+
+            > li:first-of-type {
+                flex-grow: 0;
+                width: 160px;
+            }
+        }
+    }
+}
+// 考试详情区域
+
+#examinfo {
+    padding: 15px 25px;
+    background-color: #f7f7f7;
+
+    > b {
+        color: #414141;
+        font-size: 14px;
+    }
+
+    > span {
+        font-size: 12px;
+        color: #414141;
+        margin-right: 30px;
+    }
+}
+
+#examtype {
+    //头部导航
+    padding: 20px 15px;
+    background-color: #edecec;
+
+    li {
+        cursor: pointer;
+        display: inline-block;
+        height: 30px;
+        width: 110px;
+        text-align: center;
+        line-height: 30px;
+        color: #080808;
+        background-color: #ffffff;
+        font-size: 12px;
+        margin-right: 10px;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #e4282c;
+        }
+    }
+
+    .selected {
+        color: #ffffff;
+        background-color: #e4282c;
+    }
+}
+// 答题区域
+
+#answerarea {
+    margin-top: 230px;
+    //主体部分
+    > .wrapper {
+        padding: 0 15px;
+    }
+}
+//题目列表区域
+
+.wrapper {
+    // 直系题目
+
+
+    > section {
+        section {
+            padding: 5px 0;
+
+            > .main {
+                padding-left: 25px;
+            }
+        }
+        border-bottom: 1px solid #d4d4d4;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #ffffff;
+            top: 0;
+            height: 10px;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #ffffff;
+            bottom: 0;
+            left: 0;
+            height: 10px;
+            width: 100%;
+            z-index: 99;
+        }
+    }
+    // 填空题
+    .textquest {
+        .main input {
+            position: static;
+            height: 30px;
+            width: 600px;
+            border: 1px solid #efefef;
+        }
+    }
+    // 主观题
+    .perquest {
+        .main textarea {
+            position: static;
+            height: 60px;
+            width: 600px;
+            border: 1px solid #efefef;
+        }
+    }
+    // 所有题目
+    section {
+        padding: 25px 0 25px 20px;
+        box-sizing: border-box;
+
+        > .title {
+            font-size: 14px;
+            color: #3d3d3d;
+            font-weight: 700;
+            margin-bottom: 10px;
+            >.signed{
+              background-color: #e4282c;
+            }
+
+            a {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background-color: #c3c3c3;
+            }
+
+            > b {
+                margin: 0 2px;
+                font-weight: 400;
+                color: #e4282c;
+            }
+
+            > p {
+                display: inline-block;
+            }
+        }
+        // 题目主体部分，适用于单选，多选和判断
+        > .main {
+            box-sizing: border-box;
+            padding-left: 50px;
+
+            > p {
+                position: relative;
+                padding: 5px 10px 5px 30px;
+                cursor: pointer;
+                vertical-align: text-bottom;
+                margin-bottom: 2px;
+
+                > input {
+                    line-height: 18px;
+                    position: absolute;
+                    left: 10px;
+                    top: 8px;
+                }
+
+                > label {
+                    line-height: 18px;
+                }
+
+                &:hover {
+                    background-color: #ffeded;
+                }
+            }
+        }
+
+        &:hover {
+            background-color: #fff7f7;
+        }
+    }
+}
+//右侧题目选择区域
+
+.typeselect {
+    position: fixed;
+    top: 230px;
+    right: 0;
+    z-index: 999;
+    width: 485px;
+    height: 100%;
+    background-color: #f5f5f5;
+    border-left: 10px solid #ffffff;
+    //上部分
+    .header {
+        padding: 10px 15px;
+
+        button {
+            width: 100%;
+            border-radius: 5px;
+            background-color: #e4282c;
+            color: #ffffff;
+            font-size: 16px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        ul {
+            font-size: 0;
+
+            li:nth-of-type(2) span {
+                background-color: #ff8933;
+            }
+
+            li:nth-of-type(3) span {
+                background-color: #696969;
+            }
+
+            li:nth-of-type(4) span {
+                background-color: #eb6877;
+            }
+
+            li {
+                width: 50%;
+                margin-top: 15px;
+                font-size: 14px;
+                color: #4c4c4c;
+                display: inline-block;
+
+                span {
+                    height: 12px;
+                    width: 12px;
+                    display: inline-block;
+                    margin-left: 5px;
+                }
+            }
+        }
+    }
+    //导航
+    nav {
+        ul {
+            border-bottom: 1px solid #424242;
+            background-color: #e1e1e1;
+            color: #424242;
+            font-size: 14px;
+            line-height: 33px;
+
+            .selected {
+                background-color: #424242;
+                color: #ffffff;
+            }
+
+            li {
+                display: inline-block;
+                padding: 0 10px;
+                cursor: pointer;
+                height: 33px;
+
+                &:hover {
+                    background-color: #424242;
+                    color: #ffffff;
+                }
+            }
+        }
+    }
+    //底部
+    .footer {
+        ul {
+            padding: 20px 15px 0;
+
+            li {
+                margin-bottom: 15px;
+
+                h2 {
+                    color: #424242;
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+
+
+                span {
+                    height: 25px;
+                    width: 25px;
+                    line-height: 25px;
+                    display: inline-block;
+                    text-align: center;
+                    background-color: #424242;
+                    font-size: 14px;
+                    color: #ffffff;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    margin-right: 5px;
+                }
+                >.finshed{
+                  background-color: #ff8933;
+                }
+                >.signed{
+                  background-color: #eb6877;
+                }
+            }
+        }
+    }
+}

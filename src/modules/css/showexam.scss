@@ -1,0 +1,338 @@
+.content {
+    width: 1200px;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+// 固定的头部
+
+#fix-header {
+    background-color: #ffffff;
+    width: 100%;
+}
+//头部
+
+#header {
+    position: relative;
+
+    > .title {
+        font-size: 30px;
+        color: #414141;
+        line-height: 110px;
+        text-align: center;
+    }
+
+    > p {
+        margin: 0;
+        padding-bottom: 30px;
+        font-size: 12px;
+        text-align: center;
+        color: #7f7f7f;
+    }
+}
+//得分展示区域，最初为隐藏状态
+
+#scorearea {
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 1px dashed #c3c3c3;
+    padding: 15px 0;
+    // 你的得分
+    > .allscore {
+        float: left;
+        height: 320px;
+        width: 300px;
+        border: 1px solid #cec8c8;
+        box-sizing: border-box;
+
+        h2 {
+            font-weight: 400;
+            width: 100%;
+            height: 65px;
+            line-height: 65px;
+            color: #2a2a2a;
+            font-size: 18px;
+            text-indent: 35px;
+        }
+
+        h3 {
+            font-weight: 400;
+            background-color: #fbfaf7;
+            height: calc(100% - 65px);
+            text-align: center;
+            color: #2a2a2a;
+            font-size: 18px;
+
+            > span {
+                text-align: left;
+                color: #2a2a2a;
+                font-size: 18px;
+                text-indent: 35px;
+                display: block;
+                height: 65px;
+                line-height: 65px;
+            }
+
+            > b {
+                font-weight: 200;
+                color: #efb116;
+                font-size: 185px;
+                line-height: 185px;
+            }
+        }
+    }
+    // 得分列表
+    > .scoreList {
+        height: 350px;
+        width: 880px;
+        float: right;
+        box-sizing: border-box;
+        border: 1px solid #d2d2d2;
+        border-right: none;
+        background-color: #f6f6f6;
+
+        > ul {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+
+            > li {
+                flex-grow: 1;
+                height: 100%;
+                box-sizing: border-box;
+                border-right: 1px solid #d2d2d2;
+
+                > ul {
+                    height: 100%;
+                }
+
+                li {
+                    text-align: center;
+                    height: 20%;
+                    font-size: 18px;
+                    line-height: 70px;
+                    color: #2a2a2a;
+                }
+
+                :nth-of-type(4),
+                li:nth-of-type(2) {
+                    background-color: #ffffff;
+                }
+            }
+
+            > li:first-of-type {
+                flex-grow: 0;
+                width: 160px;
+            }
+        }
+    }
+}
+
+
+#examtype {
+    //头部导航
+
+    ul{
+      padding: 15px;
+      background-color: #edecec;
+    }
+    //顶部定位的选择框
+    .top-fixed{
+      position: fixed;
+      top: 0;
+      width: 1170px;
+      z-index: 999;
+    }
+    li {
+        cursor: pointer;
+        display: inline-block;
+        height: 30px;
+        width: 110px;
+        text-align: center;
+        line-height: 30px;
+        color: #080808;
+        background-color: #ffffff;
+        font-size: 12px;
+        margin-right: 10px;
+
+        &:hover {
+            color: #ffffff;
+            background-color: #efb116;
+        }
+    }
+
+    .selected {
+        color: #ffffff;
+        background-color: #efb116;
+    }
+}
+// 答题区域
+
+#answerarea {
+    //主体部分
+    > .wrapper {
+    }
+}
+//题目列表区域
+
+.wrapper {
+    // 直系题目
+
+
+    > section {
+        section {
+            padding: 5px 0;
+
+            > .main {
+                padding-left: 70px;
+            }
+        }
+        border-bottom: 1px solid #d4d4d4;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #ffffff;
+            top: 0;
+            height: 10px;
+            left: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        &:before {
+            position: absolute;
+            display: block;
+            content: "";
+            background-color: #ffffff;
+            bottom: 0;
+            left: 0;
+            height: 10px;
+            width: 100%;
+            z-index: 99;
+        }
+    }
+    // 填空题
+    .textquest {
+      .main p{
+        padding-left: 0;
+      }
+        .main input {
+            position: static;
+            height: 30px;
+            width: 600px;
+            box-sizing: border-box;
+            padding-left: 5px;
+            border: 1px solid #efefef;
+        }
+    }
+    // 主观题
+    .perquest {
+          .main{
+            aside{
+              padding: 2.5px 5px;
+              color: #2faa2c;
+              font-size: 14px;
+              border: 1px solid #2faa2c;
+              display: inline-block;
+            }
+            p{
+              padding-left: 0;
+            }
+          }
+        .main textarea {
+          box-sizing: border-box;
+          padding: 5px;
+            position: static;
+            height: 60px;
+            width: 600px;
+            border: 1px solid #efefef;
+        }
+        .main textarea:disabled{
+          background-color: #f2f2f2;
+        }
+    }
+    // 所有题目
+    section {
+        padding: 25px 0 25px 20px;
+        box-sizing: border-box;
+
+        > .title {
+            font-size: 14px;
+            color: #3d3d3d;
+            font-weight: 700;
+            margin-bottom: 10px;
+            >.signed{
+              background-color: #e4282c;
+            }
+
+            a {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                background-color: #c3c3c3;
+            }
+
+            > b {
+              display: inline-block;
+              width: 70px;
+                font-weight: 400;
+                color: #e4282c;
+            }
+
+            > p {
+                display: inline-block;
+            }
+        }
+        // 题目主体部分，适用于单选，多选和判断
+        > .main {
+            box-sizing: border-box;
+            padding-left: 70px;
+
+            > p {
+                position: relative;
+                padding: 5px 10px 5px 30px;
+                cursor: pointer;
+                vertical-align: text-bottom;
+                margin-bottom: 2px;
+
+                > input {
+                    line-height: 18px;
+                    position: absolute;
+                    left: 0;
+                    top: 8px;
+                }
+
+                > label {
+                    line-height: 18px;
+                }
+
+
+            }
+            >aside{
+              margin-top: 10px;
+              >span{
+                display: inline-block;
+                padding: 2.5px 5px;
+                font-size: 14px;
+                margin-right: 30px;
+                >span{
+                  color: #2faa2c;
+                  font-weight: 700;
+                }
+              }
+              >.trueanswer{
+                color: #e4282c;
+                border: 1px solid #e4282c;
+              }
+              >.falseanswer{
+                color: #2faa2c;
+                border: 1px solid #2faa2c;
+              }
+            }
+        }
+
+
+    }
+}

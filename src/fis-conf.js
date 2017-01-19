@@ -77,7 +77,7 @@ fis.match(/^\/modules\/(.*\.(?:png|jpg|gif))$/i, {
 });
 
 // 配置js
-fis.match(/^\/modules\/(.*\.es)$/i, {
+fis.match(/^\/modules\/(.*\.js)$/i, {
     parser: fis.plugin('babel-6.x'),
     rExt: 'js',
     isMod: true,

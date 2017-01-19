@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>考试系统</title>
+    <link rel="stylesheet" href="./modules/css/config.scss">
+    <link rel="stylesheet" href="./modules/css/showexam.scss">
+</head>
+
+<body>
+    <!-- 考试系统主体 -->
+    <div class="content" id="vue-container">
+        <!-- 固定的头部 -->
+        <div id="fix-header">
+            <!-- 头部显示区域，标题时间和倒计时 -->
+            <div id="header">
+                <!-- 标题和时间倒计时 -->
+                <div class="title">
+                    {{qstData.Name}}
+                </div>
+                <p class="time">
+                    交卷时间：2016-12-20 14:26
+                </p>
+            </div>
+            <!-- 成绩展示区 -->
+            <div id="scorearea" class="clear">
+                <div class="allscore">
+                    <h2>
+                  总得分：{{qstData.TotalScore}}
+                </h2>
+                    <h3>
+                  <span>你的得分：</span>
+                  <b>0</b>分
+                </h3>
+                </div>
+                <!-- 得分列表 -->
+                <div class="scoreList">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li></li>
+                                <li>正确</li>
+                                <li>错误</li>
+                                <li>未答</li>
+                                <li>得分</li>
+                            </ul>
+                        </li>
+                        <li v-for="item in scoreList">
+                            <ul>
+                              <template v-for="ite,index in item">
+                                <li v-if="index != 'Totality'">{{ite}}</li>
+                              </template>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 题型导航条 -->
+            <nav id="examtype">
+                <ul>
+                    <!-- 题目类型过滤显示 ，点击时触发过滤函数，只显示当前类型匹配的题目-->
+                    <li v-bind:class="{selected:ShowAll}" v-on:click="typeSel('All')">显示全部</li>
+                    <li v-for="item in qstData.QuestionsTypes" v-bind:class="{selected:item.isshow===true}" v-on:click="typeSel(item)">{{item.DisplayText}}</li>
+                </ul>
+                <ul class="top-fixed" v-show="topSelect">
+                    <!-- 题目类型过滤显示 ，点击时触发过滤函数，只显示当前类型匹配的题目-->
+                    <li v-bind:class="{selected:ShowAll}" v-on:click="typeSel('All')">显示全部</li>
+                    <li v-for="item in qstData.QuestionsTypes" v-bind:class="{selected:item.isshow===true}" v-on:click="typeSel(item)">{{item.DisplayText}}</li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 答题区域 -->
+        <div id="answerarea">
+            <!-- 题目主体部分 -->
+            <article class="wrapper">
+                <template v-for="item,index in qstData.QuestionsItems">
+                <!-- 当前为主观题 -->
+                    <template v-if="item.Type===1">
+                      <section class="perquest" v-show="!item.isshow">
+                        <div id="Title1"></div>
+                          <div class="title" >
+                              <b>(<span>{{item.GetScore}}</span>/{{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                          </div>
+                          <div class="main">
+                            <p>
+                                <textarea disabled v-model="item.StudentAnswer" ></textarea>
+                            </p>
+                            <aside>您的得分：{{item.GetScore}}</aside>
+                          </div>
+                      </section>
+                      </template>
+                    <!-- 单选题 -->
+                    <template v-if="item.Type===2">
+                        <section class="onlyquest"  v-show="!item.isshow">
+                            <!-- 标题 -->
+                            <div class="title">
+                                <b>(<span>{{item.GetScore}}</span>/{{item.Score}})</b>{{index+1}}. <p v-html="item.Title"></p>
+                            </div>
+                            <!-- 题目主体 -->
+                            <div class="main">
+                                <p v-for="ite,cindex in item.SimpleItem">
+                                    <input disabled type="radio" v-model="item.StudentAnswer" v-bind:value="ite.Id"  ><label >{{tindex[cindex]}}. {{ite.Text}}</label>
+                                </p>
+                                <aside>
+                                  <span v-show="item.IsCorrect" class="trueanswer">回答正确！</span>
+                                  <span v-show="!item.IsCorrect" class="falseanswer">回答错误！</span>
+                                  <span v-show="item.IsShowAnswer">正确答案：<span>{{item.Answer}} </span> </span>
+                                </aside>
+                            </div>
+                        </section>
+                      </template>
+                    <!-- 多选题 -->
+                    <template v-if="item.Type===3">
+                        <section class="morequest"  v-show="!item.isshow">
+                            <!-- 标题 -->
+                            <div class="title">
+                                <b>(<span>{{item.GetScore}}</span>/{{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                            </div>
+                            <!-- 题目主体 -->
+                            <div class="main">
+                                <p v-for="ite,cindex in item.SimpleItem">
+                                    <input type="checkbox" v-model="item.StudentAnswer" v-bind:value="ite.Id"  ><label >{{tindex[cindex]}}. {{ite.Text}}</label>
+                                </p>
+                                <aside>
+                                  <span v-show="item.IsCorrect" class="trueanswer">回答正确！</span>
+                                  <span v-show="!item.IsCorrect" class="falseanswer">回答错误！</span>
+                                  <span v-show="item.IsShowAnswer">正确答案：<span>{{item.Answer}} </span> </span>
+                                </aside>
+                            </div>
+                        </section>
+                      </template>
+                    <!-- 判断题 -->
+                    <template v-if="item.Type===4">
+                        <section class="judgequest"  v-show="!item.isshow">
+                          <div class="title">
+                              <b>(<span>{{item.GetScore}}</span>/{{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                          </div>
+                            <!-- 题目主体 -->
+                            <div class="main">
+                                <p>
+                                    <input type="radio" value="1" v-model="item.StudentAnswer"   ><label >正确</label>
+                                </p>
+                                <p>
+                                    <input type="radio" value="0" v-model="item.StudentAnswer"    ><label >错误</label>
+                                </p>
+                                <aside>
+                                  <span v-show="item.IsCorrect" class="trueanswer">回答正确！</span>
+                                  <span v-show="!item.IsCorrect" class="falseanswer">回答错误！</span>
+                                  <span v-show="item.IsShowAnswer">正确答案：<span>{{item.Answer}} </span> </span>
+                                </aside>
+                            </div>
+                        </section>
+                      </template>
+                    <!-- 填空题 -->
+                    <template v-if="item.Type===5">
+                        <section class="textquest" v-show="!item.isshow">
+                          <div class="title">
+                              <b>(<span>{{item.GetScore}}</span>/{{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                          </div>
+                            <div class="main">
+                                <p>
+                                    <input type="text" v-model="item.StudentAnswer" >
+                                </p>
+                                <aside>
+                                  <span v-show="item.IsCorrect" class="trueanswer">回答正确！</span>
+                                  <span v-show="!item.IsCorrect" class="falseanswer">回答错误！</span>
+                                  <span v-show="item.IsShowAnswer">正确答案：<span>{{item.Answer}} </span> </span>
+                                </aside>
+                            </div>
+                        </section>
+                      </template>
+                    <!-- 综合题 -->
+                    <template v-if="item.Type===7">
+                        <section class="comquest" v-show="!item.isshow">
+                          <div class="title">
+                              <b>(<span>{{item.GetScore}}</span>/{{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                          </div>
+                            <div class="main">
+                              <!-- 综合题新得一轮循环 -->
+                              <template v-for="ite,cindex in item.GroupItem">
+                                <!-- 当前为主观题 -->
+                                  <template v-if="ite.Type===1">
+                                    <section class="perquest">
+                                        <div class="title" >
+                                            <b>(<span>{{ite.GetScore}}</span>/{{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                        </div>
+                                        <div class="main">
+                                          <p>
+                                              <textarea disabled v-model="ite.StudentAnswer" ></textarea>
+                                          </p>
+                                          <aside>您的得分：{{item.GetScore}}分</aside>
+                                        </div>
+                                    </section>
+                                  </template>
+                                <!-- 单选题 -->
+                                <template v-if="ite.Type===2">
+                                    <section class="onlyquest">
+                                        <!-- 标题 -->
+                                        <div class="title">
+                                            <b>(<span>{{ite.GetScore}}</span>/{{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                        </div>
+                                        <!-- 题目主体 -->
+                                        <div class="main">
+                                            <p v-for="it,sindex in ite.SimpleItem">
+                                                <input disabled type="radio" v-bind:value="it.Id"  v-model="ite.StudentAnswer" ><label >{{tindex[sindex]}}. {{it.Text}}</label>
+                                            </p>
+                                            <aside>
+                                              <span v-show="ite.IsCorrect" class="trueanswer">回答正确！</span>
+                                              <span v-show="!ite.IsCorrect" class="falseanswer">回答错误！</span>
+                                              <span v-show="ite.IsShowAnswer">正确答案：<span>{{ite.Answer}} </span> </span>
+                                            </aside>
+                                        </div>
+                                    </section>
+                                  </template>
+                                <!-- 多选题 -->
+                                <template v-if="ite.Type===3">
+                                    <section class="morequest">
+                                        <!-- 标题 -->
+                                        <div class="title">
+                                            <b>(<span>{{ite.GetScore}}</span>/{{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                        </div>
+                                        <!-- 题目主体 -->
+                                        <div class="main">
+                                            <p v-for="it,sindex in ite.SimpleItem">
+                                                <input disabled type="checkbox" v-bind:value="it.Id"  v-model="ite.StudentAnswer" ><label >{{tindex[sindex]}}. {{it.Text}}</label>
+                                            </p>
+                                            <aside>
+                                              <span v-show="ite.IsCorrect" class="trueanswer">回答正确！</span>
+                                              <span v-show="!ite.IsCorrect" class="falseanswer">回答错误！</span>
+                                              <span v-show="ite.IsShowAnswer">正确答案：<span>{{ite.Answer}} </span> </span>
+                                            </aside>
+                                        </div>
+                                    </section>
+                                  </template>
+                                <!-- 判断题 -->
+                                <template v-if="ite.Type===4">
+                                    <section class="judgequest">
+                                      <div class="title">
+                                          <b>(<span>{{ite.GetScore}}</span>/{{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                      </div>
+                                        <!-- 题目主体 -->
+                                        <div class="main">
+                                            <p>
+                                                <input type="radio" disabled  v-model="ite.StudentAnswer" ><label >正确</label>
+                                            </p>
+                                            <p>
+                                                <input type="radio" disabled  v-model="ite.StudentAnswer" ><label >错误</label>
+                                            </p>
+                                            <aside>
+                                              <span v-show="ite.IsCorrect" class="trueanswer">回答正确！</span>
+                                              <span v-show="!ite.IsCorrect" class="falseanswer">回答错误！</span>
+                                              <span v-show="ite.IsShowAnswer">正确答案：<span>{{ite.Answer}} </span> </span>
+                                            </aside>
+                                        </div>
+                                    </section>
+                                  </template>
+                                <!-- 填空题 -->
+                                <template v-if="ite.Type===5">
+                                    <section class="textquest">
+                                      <div class="title">
+                                          <b>(<span>{{ite.GetScore}}</span>/{{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                      </div>
+                                        <div class="main">
+                                            <p>
+                                                <input disabled type="text" v-model="ite.StudentAnswer" >
+                                            </p>
+                                            <aside>
+                                              <span v-show="ite.IsCorrect" class="trueanswer">回答正确！</span>
+                                              <span v-show="!ite.IsCorrect" class="falseanswer">回答错误！</span>
+                                              <span v-show="ite.IsShowAnswer">正确答案：<span>{{ite.Answer}} </span> </span>
+                                            </aside>
+                                        </div>
+                                    </section>
+                                  </template>
+                              </template>
+                            </div>
+                        </section>
+                      </template>
+                </template>
+            </article>
+        </div>
+    </div>
+    <script src="./lib/js/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="./lib/js/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="./lib/js/vue-resource/dist/vue-resource.min.js" charset="utf-8"></script>
+    <script src="./lib/js/layer/layer/layer.js" charset="utf-8"></script>
+    <script src="./modules/app/showexam.js" charset="utf-8"></script>
+</body>
+
+</html>

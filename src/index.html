@@ -1,10 +1,368 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-	</head>
-	<body>
-		
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <title>考试系统</title>
+    <link rel="stylesheet" href="./modules/css/config.scss">
+    <link rel="stylesheet" href="./modules/css/index.scss">
+</head>
+
+<body>
+    <!-- 考试系统主体 -->
+    <div class="content single" id="vue-container" v-cloak>
+        <!-- 固定的头部 -->
+        <div id="fix-header">
+            <!-- 头部显示区域，标题时间和倒计时 -->
+            <div id="header">
+                <!-- 标题和时间倒计时 -->
+                <div class="title">
+                    {{qstData.Name}}
+                    <!-- 倒计时时间 -->
+                    <time>
+                剩余时间 <b>{{nowTime}}</b>
+              </time>
+                </div>
+                <p class="time">
+                    交卷时间：2016-12-20 14:26
+                </p>
+            </div>
+            <!-- 成绩展示区 -->
+            <div id="scorearea" class="clear">
+                <div class="allscore">
+                    <h2>
+                  总得分：{{qstData.TotalScore}}
+                </h2>
+                    <h3>
+                  <span>你的得分：</span>
+                  <b>0</b>分
+                </h3>
+                </div>
+                <!-- 得分列表 -->
+                <div class="scoreList">
+                    <ul>
+                        <li>
+                            <ul>
+                                <li></li>
+                                <li>正确</li>
+                                <li>错误</li>
+                                <li>未答</li>
+                                <li>得分</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>综合题</li>
+                                <li>0</li>
+                                <li>0</li>
+                                <li>0</li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>多选题</li>
+                                <li>2</li>
+                                <li>1</li>
+                                <li>3</li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>单选题</li>
+                                <li>1</li>
+                                <li>0</li>
+                                <li>3</li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>判断题</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>0</li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>填空题</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>0</li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>主观题</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>0</li>
+                                <li>1</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 考试详情展示 -->
+            <div id="examinfo">
+                <b>考试详情：</b>
+                <span>总分： {{qstData.TotalScore}}</span>
+                <span>及格分数： {{qstData.PassScore}}</span>
+                <span>考试时长： {{qstData.ExamLength}}</span>
+            </div>
+            <!-- 题型导航条 -->
+            <nav id="examtype">
+                <ul>
+                    <!-- 题目类型过滤显示 ，点击时触发过滤函数，只显示当前类型匹配的题目-->
+                    <li v-bind:class="{selected:ShowAll}" v-on:click="typeSel('All')">显示全部</li>
+                    <li v-for="item in qstData.QuestionsTypes" v-bind:class="{selected:item.isshow===true}" v-on:click="typeSel(item)">{{item.DisplayText}}</li>
+                </ul>
+                <div class="buttoncoll">
+                  <button type="button">上一题</button>
+                  <button type="button">下一题</button>
+                </div>
+            </nav>
+        </div>
+
+        <!-- 答题区域 -->
+        <div id="answerarea">
+            <!-- 题目主体部分 -->
+            <article class="wrapper">
+                <template v-for="item,index in qstData.QuestionsItems">
+                <!-- 当前为主观题 -->
+                  <template v-if="item.Type===1">
+                    <section class="perquest" v-show="!item.isshow">
+                      <div id="Title1"></div>
+                        <div class="title" >
+                            <a href="javascript:void(0);" v-bind:class="{signed:item.issign}" v-on:click="signtoggle(item)"></a>
+                            <b>({{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                        </div>
+                        <div class="main">
+                          <p>
+                              <textarea v-model="answerList[index].AnswerText" v-on:input="answerchange(answerList[index],item)"></textarea>
+                          </p>
+                        </div>
+                    </section>
+                  </template>
+                <!-- 单选题 -->
+                <template v-if="item.Type===2">
+                    <section class="onlyquest"  v-show="!item.isshow">
+                        <!-- 标题 -->
+                        <div class="title">
+                            <a href="javascript:void(0);" v-bind:class="{signed:item.issign}" v-on:click="signtoggle(item)"></a>
+                            <b>({{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                        </div>
+                        <!-- 题目主体 -->
+                        <div class="main">
+                            <p v-for="ite,cindex in item.SimpleItem">
+                                <input type="radio" v-model="answerList[index].AnswerText" v-bind:value="ite.Id" v-bind:id="item.Id+'_'+ite.Id" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+ite.Id">{{tindex[cindex]}}. {{ite.Text}}</label>
+                            </p>
+                        </div>
+                    </section>
+                  </template>
+                <!-- 多选题 -->
+                <template v-if="item.Type===3">
+                    <section class="morequest"  v-show="!item.isshow">
+                        <!-- 标题 -->
+                        <div class="title">
+                            <a href="javascript:void(0);" v-bind:class="{signed:item.issign}" v-on:click="signtoggle(item)"></a>
+                            <b>({{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                        </div>
+                        <!-- 题目主体 -->
+                        <div class="main">
+                            <p v-for="ite,cindex in item.SimpleItem">
+                                <input type="checkbox" v-model="answerList[index].AnswerText" v-bind:value="ite.Id" v-bind:id="item.Id+'_'+ite.Id" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+ite.Id">{{tindex[cindex]}}. {{ite.Text}}</label>
+                            </p>
+                        </div>
+                    </section>
+                  </template>
+                <!-- 判断题 -->
+                <template v-if="item.Type===4">
+                    <section class="judgequest"  v-show="!item.isshow">
+                      <div class="title">
+                          <a href="javascript:void(0);" v-bind:class="{signed:item.issign}" v-on:click="signtoggle(item)"></a>
+                          <b>({{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                      </div>
+                        <!-- 题目主体 -->
+                        <div class="main">
+                            <p>
+                                <input type="radio" value="1" v-model="answerList[index].AnswerText"  v-bind:id="item.Id+'_'+1" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+1">正确</label>
+                            </p>
+                            <p>
+                                <input type="radio" value="0" v-model="answerList[index].AnswerText"   v-bind:id="item.Id+'_'+2" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+2">错误</label>
+                            </p>
+                        </div>
+                    </section>
+                  </template>
+                <!-- 填空题 -->
+                <template v-if="item.Type===5">
+                    <section class="textquest" v-show="!item.isshow">
+                      <div class="title">
+                          <a href="javascript:void(0);" v-bind:class="{signed:item.issign}" v-on:click="signtoggle(item)"></a>
+                          <b>({{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                      </div>
+                        <div class="main">
+                            <p>
+                                <input type="text" v-model="answerList[index].AnswerText" v-on:input="answerchange(answerList[index],item)">
+                            </p>
+                        </div>
+                    </section>
+                  </template>
+                <!-- 综合题 -->
+                <template v-if="item.Type===7">
+                    <section class="comquest" v-show="!item.isshow">
+                      <div class="title">
+                          <a href="javascript:void(0);" v-bind:class="{signed:item.issign}" v-on:click="signtoggle(item)"></a>
+                          <b>({{item.Score}}分)</b>{{index+1}}. <p v-html="item.Title"></p>
+                      </div>
+                        <div class="main">
+                          <!-- 综合题新得一轮循环 -->
+                          <template v-for="ite,cindex in item.GroupItem">
+                            <!-- 当前为主观题 -->
+                              <template v-if="ite.Type===1">
+                                <section class="perquest">
+                                    <div class="title" >
+                                        <b>({{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                    </div>
+                                    <div class="main">
+                                      <p>
+                                          <textarea v-model="answerList[index].GroupAnswers[cindex].AnswerText" v-on:input="answerchange(answerList[index],item)"></textarea>
+                                      </p>
+                                    </div>
+                                </section>
+                              </template>
+                            <!-- 单选题 -->
+                            <template v-if="ite.Type===2">
+                                <section class="onlyquest">
+                                    <!-- 标题 -->
+                                    <div class="title">
+                                        <b>({{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                    </div>
+                                    <!-- 题目主体 -->
+                                    <div class="main">
+                                        <p v-for="it,sindex in ite.SimpleItem">
+                                            <input type="radio" v-bind:value="it.Id" v-bind:id="item.Id+'_'+ite.Id+'_'+it.Id" v-model="answerList[index].GroupAnswers[cindex].AnswerText" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+ite.Id+'_'+it.Id">{{tindex[sindex]}}. {{it.Text}}</label>
+                                        </p>
+                                    </div>
+                                </section>
+                              </template>
+                            <!-- 多选题 -->
+                            <template v-if="ite.Type===3">
+                                <section class="morequest">
+                                    <!-- 标题 -->
+                                    <div class="title">
+                                        <b>({{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                    </div>
+                                    <!-- 题目主体 -->
+                                    <div class="main">
+                                        <p v-for="it,sindex in ite.SimpleItem">
+                                            <input type="checkbox" v-bind:value="it.Id" v-bind:id="item.Id+'_'+ite.Id+'_'+it.Id" v-model="answerList[index].GroupAnswers[cindex].AnswerText" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+ite.Id+'_'+it.Id">{{tindex[sindex]}}. {{it.Text}}</label>
+                                        </p>
+                                    </div>
+                                </section>
+                              </template>
+                            <!-- 判断题 -->
+                            <template v-if="ite.Type===4">
+                                <section class="judgequest">
+                                  <div class="title">
+                                      <b>({{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                  </div>
+                                    <!-- 题目主体 -->
+                                    <div class="main">
+                                        <p>
+                                            <input type="radio"  v-bind:id="item.Id+'_'+ite.Id+'_'+1" v-model="answerList[index].GroupAnswers[cindex].AnswerText" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+ite.Id+'_'+1">正确</label>
+                                        </p>
+                                        <p>
+                                            <input type="radio"  v-bind:id="item.Id+'_'+ite.Id+'_'+2" v-model="answerList[index].GroupAnswers[cindex].AnswerText" v-on:change="answerchange(answerList[index],item)"><label v-bind:for="item.Id+'_'+ite.Id+'_'+2">错误</label>
+                                        </p>
+                                    </div>
+                                </section>
+                              </template>
+                            <!-- 填空题 -->
+                            <template v-if="ite.Type===5">
+                                <section class="textquest">
+                                  <div class="title">
+                                      <b>({{ite.Score}}分)</b>{{cindex+1}}. <p v-html="ite.Title"></p>
+                                  </div>
+                                    <div class="main">
+                                        <p>
+                                            <input type="text" v-model="answerList[index].GroupAnswers[cindex].AnswerText" v-on:input="answerchange(answerList[index],item)">
+                                        </p>
+                                    </div>
+                                </section>
+                              </template>
+                          </template>
+                        </div>
+                    </section>
+                  </template>
+                </template>
+            </article>
+            <!-- 右侧题型关联区域 -->
+            <aside class="typeselect">
+                <div class="header">
+                    <button type="button" v-on:click="sendanswer()">提交试卷</button>
+                    <ul>
+                        <li>总题目：{{rightType[0].val}}</li>
+                        <li>已完成：{{rightType[1].val}}<span></span></li>
+                        <li>未完成：{{rightType[2].val}}<span></span></li>
+                        <li>已标记：{{rightType[3].val}}<span></span></li>
+                    </ul>
+                </div>
+                <nav>
+                    <ul>
+                      <!-- 状态过滤函数 -->
+                    <li v-for="item,index in rightType" v-bind:class="{selected:item.isshow}" v-on:click="stateSel(item,index)">{{item.text}}</li>
+                    </ul>
+                </nav>
+                <div class="footer">
+                    <ul>
+                      <!-- 对题目和类型进行双重过滤 -->
+                        <li v-for="item in qstData.QuestionsTypes" v-show="rightType[0].isshow">
+                            <h2>{{item.DisplayText}}</h2>
+                            <template v-for="ite,index in qstData.QuestionsItems">
+                               <template v-if="ite.Type.toString()===item.Value">
+                                 <span v-bind:class="{signed:ite.issign,finshed:ite.isfinish}"  v-on:click="rightcheck(index,ite.Type)">{{index+1}}</span>
+                               </template>
+                            </template>
+                        </li>
+                        <li v-for="item in qstData.QuestionsTypes" v-show="rightType[1].isshow">
+                            <h2>{{item.DisplayText}}</h2>
+                            <template v-for="ite,index in qstData.QuestionsItems">
+                               <template v-if="ite.Type.toString()===item.Value">
+                                 <span v-bind:class="{signed:ite.issign,finshed:ite.isfinish}" v-show="ite.isfinish" v-on:click="rightcheck(index,ite.Type)">{{index+1}}</span>
+                               </template>
+                            </template>
+                        </li>
+                        <li v-for="item in qstData.QuestionsTypes" v-show="rightType[2].isshow">
+                            <h2>{{item.DisplayText}}</h2>
+                            <template v-for="ite,index in qstData.QuestionsItems">
+                               <template v-if="ite.Type.toString()===item.Value">
+                                 <span v-bind:class="{signed:ite.issign,finshed:ite.isfinish}" v-show="!ite.isfinish" v-on:click="rightcheck(index,ite.Type)">{{index+1}}</span>
+                               </template>
+                            </template>
+                        </li>
+                        <li v-for="item in qstData.QuestionsTypes" v-show="rightType[3].isshow">
+                            <h2>{{item.DisplayText}}</h2>
+                            <template v-for="ite,index in qstData.QuestionsItems">
+                               <template v-if="ite.Type.toString()===item.Value">
+                                 <span v-bind:class="{signed:ite.issign,finshed:ite.isfinish}" v-show="ite.issign" v-on:click="rightcheck(index,ite.Type)">{{index+1}}</span>
+                               </template>
+                            </template>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="./lib/js/jquery/dist/jquery.min.js" charset="utf-8"></script>
+    <script src="./lib/js/vue/dist/vue.js" charset="utf-8"></script>
+    <script src="./lib/js/vue-resource/dist/vue-resource.min.js" charset="utf-8"></script>
+    <script src="./lib/js/layer/layer/layer.js" charset="utf-8"></script>
+    <script src="./modules/app/index.js" charset="utf-8"></script>
+</body>
+
 </html>

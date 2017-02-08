@@ -1,0 +1,2602 @@
+{
+    "res": {
+        "test/dynamic.js": {
+            "uri": "/test/dynamic.js",
+            "type": "js"
+        },
+        "lib/es5-sham.js": {
+            "uri": "/lib/es5-sham.js",
+            "type": "js"
+        },
+        "lib/es5-shim.js": {
+            "uri": "/lib/es5-shim.js",
+            "type": "js"
+        },
+        "lib/html5-shim.js": {
+            "uri": "/lib/html5-shim.js",
+            "type": "js"
+        },
+        "lib/js/animate.css/animate.css": {
+            "uri": "/lib/js/animate.css/animate.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/animate.min.css": {
+            "uri": "/lib/js/animate.css/animate.min.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/gulpfile.js": {
+            "uri": "/lib/js/animate.css/gulpfile.js",
+            "type": "js"
+        },
+        "lib/js/animate.css/source/_base.css": {
+            "uri": "/lib/js/animate.css/source/_base.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/bounce.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/bounce.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/flash.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/flash.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/headShake.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/headShake.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/jello.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/jello.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/pulse.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/pulse.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/rubberBand.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/rubberBand.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/shake.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/shake.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/swing.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/swing.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/tada.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/tada.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/attention_seekers/wobble.css": {
+            "uri": "/lib/js/animate.css/source/attention_seekers/wobble.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_entrances/bounceIn.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_entrances/bounceIn.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_entrances/bounceInDown.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_entrances/bounceInDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_entrances/bounceInLeft.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_entrances/bounceInLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_entrances/bounceInRight.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_entrances/bounceInRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_entrances/bounceInUp.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_entrances/bounceInUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_exits/bounceOut.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_exits/bounceOut.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_exits/bounceOutDown.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_exits/bounceOutDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_exits/bounceOutLeft.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_exits/bounceOutLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_exits/bounceOutRight.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_exits/bounceOutRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/bouncing_exits/bounceOutUp.css": {
+            "uri": "/lib/js/animate.css/source/bouncing_exits/bounceOutUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeIn.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeIn.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInDown.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInDownBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInDownBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInLeft.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInLeftBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInLeftBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInRight.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInRightBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInRightBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInUp.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_entrances/fadeInUpBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_entrances/fadeInUpBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOut.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOut.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutDown.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutDownBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutDownBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutLeft.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutLeftBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutLeftBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutRight.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutRightBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutRightBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutUp.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/fading_exits/fadeOutUpBig.css": {
+            "uri": "/lib/js/animate.css/source/fading_exits/fadeOutUpBig.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/flippers/flip.css": {
+            "uri": "/lib/js/animate.css/source/flippers/flip.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/flippers/flipInX.css": {
+            "uri": "/lib/js/animate.css/source/flippers/flipInX.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/flippers/flipInY.css": {
+            "uri": "/lib/js/animate.css/source/flippers/flipInY.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/flippers/flipOutX.css": {
+            "uri": "/lib/js/animate.css/source/flippers/flipOutX.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/flippers/flipOutY.css": {
+            "uri": "/lib/js/animate.css/source/flippers/flipOutY.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/lightspeed/lightSpeedIn.css": {
+            "uri": "/lib/js/animate.css/source/lightspeed/lightSpeedIn.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/lightspeed/lightSpeedOut.css": {
+            "uri": "/lib/js/animate.css/source/lightspeed/lightSpeedOut.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_entrances/rotateIn.css": {
+            "uri": "/lib/js/animate.css/source/rotating_entrances/rotateIn.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_entrances/rotateInDownLeft.css": {
+            "uri": "/lib/js/animate.css/source/rotating_entrances/rotateInDownLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_entrances/rotateInDownRight.css": {
+            "uri": "/lib/js/animate.css/source/rotating_entrances/rotateInDownRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_entrances/rotateInUpLeft.css": {
+            "uri": "/lib/js/animate.css/source/rotating_entrances/rotateInUpLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_entrances/rotateInUpRight.css": {
+            "uri": "/lib/js/animate.css/source/rotating_entrances/rotateInUpRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_exits/rotateOut.css": {
+            "uri": "/lib/js/animate.css/source/rotating_exits/rotateOut.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_exits/rotateOutDownLeft.css": {
+            "uri": "/lib/js/animate.css/source/rotating_exits/rotateOutDownLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_exits/rotateOutDownRight.css": {
+            "uri": "/lib/js/animate.css/source/rotating_exits/rotateOutDownRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_exits/rotateOutUpLeft.css": {
+            "uri": "/lib/js/animate.css/source/rotating_exits/rotateOutUpLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/rotating_exits/rotateOutUpRight.css": {
+            "uri": "/lib/js/animate.css/source/rotating_exits/rotateOutUpRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_entrances/slideInDown.css": {
+            "uri": "/lib/js/animate.css/source/sliding_entrances/slideInDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_entrances/slideInLeft.css": {
+            "uri": "/lib/js/animate.css/source/sliding_entrances/slideInLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_entrances/slideInRight.css": {
+            "uri": "/lib/js/animate.css/source/sliding_entrances/slideInRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_entrances/slideInUp.css": {
+            "uri": "/lib/js/animate.css/source/sliding_entrances/slideInUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_exits/slideOutDown.css": {
+            "uri": "/lib/js/animate.css/source/sliding_exits/slideOutDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_exits/slideOutLeft.css": {
+            "uri": "/lib/js/animate.css/source/sliding_exits/slideOutLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_exits/slideOutRight.css": {
+            "uri": "/lib/js/animate.css/source/sliding_exits/slideOutRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/sliding_exits/slideOutUp.css": {
+            "uri": "/lib/js/animate.css/source/sliding_exits/slideOutUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/specials/hinge.css": {
+            "uri": "/lib/js/animate.css/source/specials/hinge.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/specials/rollIn.css": {
+            "uri": "/lib/js/animate.css/source/specials/rollIn.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/specials/rollOut.css": {
+            "uri": "/lib/js/animate.css/source/specials/rollOut.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_entrances/zoomIn.css": {
+            "uri": "/lib/js/animate.css/source/zooming_entrances/zoomIn.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_entrances/zoomInDown.css": {
+            "uri": "/lib/js/animate.css/source/zooming_entrances/zoomInDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_entrances/zoomInLeft.css": {
+            "uri": "/lib/js/animate.css/source/zooming_entrances/zoomInLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_entrances/zoomInRight.css": {
+            "uri": "/lib/js/animate.css/source/zooming_entrances/zoomInRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_entrances/zoomInUp.css": {
+            "uri": "/lib/js/animate.css/source/zooming_entrances/zoomInUp.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_exits/zoomOut.css": {
+            "uri": "/lib/js/animate.css/source/zooming_exits/zoomOut.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_exits/zoomOutDown.css": {
+            "uri": "/lib/js/animate.css/source/zooming_exits/zoomOutDown.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_exits/zoomOutLeft.css": {
+            "uri": "/lib/js/animate.css/source/zooming_exits/zoomOutLeft.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_exits/zoomOutRight.css": {
+            "uri": "/lib/js/animate.css/source/zooming_exits/zoomOutRight.css",
+            "type": "css"
+        },
+        "lib/js/animate.css/source/zooming_exits/zoomOutUp.css": {
+            "uri": "/lib/js/animate.css/source/zooming_exits/zoomOutUp.css",
+            "type": "css"
+        },
+        "lib/js/bootstrap/dist/css/bootstrap-theme.css": {
+            "uri": "/lib/js/bootstrap/dist/css/bootstrap-theme.css",
+            "type": "css",
+            "extras": {}
+        },
+        "lib/js/bootstrap/dist/css/bootstrap-theme.min.css": {
+            "uri": "/lib/js/bootstrap/dist/css/bootstrap-theme.min.css",
+            "type": "css",
+            "extras": {}
+        },
+        "lib/js/bootstrap/dist/css/bootstrap.css": {
+            "uri": "/lib/js/bootstrap/dist/css/bootstrap.css",
+            "type": "css",
+            "extras": {}
+        },
+        "lib/js/bootstrap/dist/css/bootstrap.min.css": {
+            "uri": "/lib/js/bootstrap/dist/css/bootstrap.min.css",
+            "type": "css",
+            "extras": {}
+        },
+        "lib/js/bootstrap/dist/js/bootstrap.js": {
+            "uri": "/lib/js/bootstrap/dist/js/bootstrap.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/dist/js/bootstrap.min.js": {
+            "uri": "/lib/js/bootstrap/dist/js/bootstrap.min.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/dist/js/npm.js": {
+            "uri": "/lib/js/bootstrap/dist/js/npm.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/grunt/bs-commonjs-generator.js": {
+            "uri": "/lib/js/bootstrap/grunt/bs-commonjs-generator.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/grunt/bs-glyphicons-data-generator.js": {
+            "uri": "/lib/js/bootstrap/grunt/bs-glyphicons-data-generator.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/grunt/bs-lessdoc-parser.js": {
+            "uri": "/lib/js/bootstrap/grunt/bs-lessdoc-parser.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/grunt/bs-raw-files-generator.js": {
+            "uri": "/lib/js/bootstrap/grunt/bs-raw-files-generator.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/grunt/change-version.js": {
+            "uri": "/lib/js/bootstrap/grunt/change-version.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/Gruntfile.js": {
+            "uri": "/lib/js/bootstrap/Gruntfile.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/affix.js": {
+            "uri": "/lib/js/bootstrap/js/affix.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/alert.js": {
+            "uri": "/lib/js/bootstrap/js/alert.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/button.js": {
+            "uri": "/lib/js/bootstrap/js/button.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/carousel.js": {
+            "uri": "/lib/js/bootstrap/js/carousel.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/collapse.js": {
+            "uri": "/lib/js/bootstrap/js/collapse.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/dropdown.js": {
+            "uri": "/lib/js/bootstrap/js/dropdown.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/modal.js": {
+            "uri": "/lib/js/bootstrap/js/modal.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/popover.js": {
+            "uri": "/lib/js/bootstrap/js/popover.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/scrollspy.js": {
+            "uri": "/lib/js/bootstrap/js/scrollspy.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/tab.js": {
+            "uri": "/lib/js/bootstrap/js/tab.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/tooltip.js": {
+            "uri": "/lib/js/bootstrap/js/tooltip.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/js/transition.js": {
+            "uri": "/lib/js/bootstrap/js/transition.js",
+            "type": "js"
+        },
+        "lib/js/bootstrap/less/alerts.less": {
+            "uri": "/lib/js/bootstrap/less/alerts.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/badges.less": {
+            "uri": "/lib/js/bootstrap/less/badges.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/bootstrap.less": {
+            "uri": "/lib/js/bootstrap/less/bootstrap.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/breadcrumbs.less": {
+            "uri": "/lib/js/bootstrap/less/breadcrumbs.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/button-groups.less": {
+            "uri": "/lib/js/bootstrap/less/button-groups.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/buttons.less": {
+            "uri": "/lib/js/bootstrap/less/buttons.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/carousel.less": {
+            "uri": "/lib/js/bootstrap/less/carousel.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/close.less": {
+            "uri": "/lib/js/bootstrap/less/close.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/code.less": {
+            "uri": "/lib/js/bootstrap/less/code.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/component-animations.less": {
+            "uri": "/lib/js/bootstrap/less/component-animations.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/dropdowns.less": {
+            "uri": "/lib/js/bootstrap/less/dropdowns.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/forms.less": {
+            "uri": "/lib/js/bootstrap/less/forms.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/glyphicons.less": {
+            "uri": "/lib/js/bootstrap/less/glyphicons.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/grid.less": {
+            "uri": "/lib/js/bootstrap/less/grid.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/input-groups.less": {
+            "uri": "/lib/js/bootstrap/less/input-groups.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/jumbotron.less": {
+            "uri": "/lib/js/bootstrap/less/jumbotron.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/labels.less": {
+            "uri": "/lib/js/bootstrap/less/labels.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/list-group.less": {
+            "uri": "/lib/js/bootstrap/less/list-group.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/media.less": {
+            "uri": "/lib/js/bootstrap/less/media.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins.less": {
+            "uri": "/lib/js/bootstrap/less/mixins.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/alerts.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/alerts.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/background-variant.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/background-variant.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/border-radius.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/border-radius.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/buttons.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/buttons.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/center-block.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/center-block.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/clearfix.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/clearfix.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/forms.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/forms.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/gradients.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/gradients.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/grid-framework.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/grid-framework.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/grid.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/grid.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/hide-text.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/hide-text.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/image.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/image.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/labels.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/labels.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/list-group.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/list-group.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/nav-divider.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/nav-divider.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/nav-vertical-align.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/nav-vertical-align.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/opacity.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/opacity.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/pagination.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/pagination.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/panels.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/panels.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/progress-bar.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/progress-bar.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/reset-filter.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/reset-filter.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/reset-text.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/reset-text.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/resize.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/resize.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/responsive-visibility.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/responsive-visibility.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/size.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/size.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/tab-focus.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/tab-focus.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/table-row.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/table-row.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/text-emphasis.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/text-emphasis.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/text-overflow.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/text-overflow.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/mixins/vendor-prefixes.less": {
+            "uri": "/lib/js/bootstrap/less/mixins/vendor-prefixes.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/modals.less": {
+            "uri": "/lib/js/bootstrap/less/modals.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/navbar.less": {
+            "uri": "/lib/js/bootstrap/less/navbar.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/navs.less": {
+            "uri": "/lib/js/bootstrap/less/navs.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/normalize.less": {
+            "uri": "/lib/js/bootstrap/less/normalize.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/pager.less": {
+            "uri": "/lib/js/bootstrap/less/pager.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/pagination.less": {
+            "uri": "/lib/js/bootstrap/less/pagination.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/panels.less": {
+            "uri": "/lib/js/bootstrap/less/panels.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/popovers.less": {
+            "uri": "/lib/js/bootstrap/less/popovers.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/print.less": {
+            "uri": "/lib/js/bootstrap/less/print.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/progress-bars.less": {
+            "uri": "/lib/js/bootstrap/less/progress-bars.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/responsive-embed.less": {
+            "uri": "/lib/js/bootstrap/less/responsive-embed.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/responsive-utilities.less": {
+            "uri": "/lib/js/bootstrap/less/responsive-utilities.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/scaffolding.less": {
+            "uri": "/lib/js/bootstrap/less/scaffolding.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/tables.less": {
+            "uri": "/lib/js/bootstrap/less/tables.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/theme.less": {
+            "uri": "/lib/js/bootstrap/less/theme.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/thumbnails.less": {
+            "uri": "/lib/js/bootstrap/less/thumbnails.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/tooltip.less": {
+            "uri": "/lib/js/bootstrap/less/tooltip.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/type.less": {
+            "uri": "/lib/js/bootstrap/less/type.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/utilities.less": {
+            "uri": "/lib/js/bootstrap/less/utilities.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/variables.less": {
+            "uri": "/lib/js/bootstrap/less/variables.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/less/wells.less": {
+            "uri": "/lib/js/bootstrap/less/wells.less",
+            "type": "less"
+        },
+        "lib/js/bootstrap/package.js": {
+            "uri": "/lib/js/bootstrap/package.js",
+            "type": "js"
+        },
+        "lib/js/ddsort/ddsort.js": {
+            "uri": "/lib/js/ddsort/ddsort.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/css/htmleaf-demo.css": {
+            "uri": "/lib/js/distpicker/css/htmleaf-demo.css",
+            "type": "css"
+        },
+        "lib/js/distpicker/css/main.css": {
+            "uri": "/lib/js/distpicker/css/main.css",
+            "type": "css"
+        },
+        "lib/js/distpicker/css/normalize.css": {
+            "uri": "/lib/js/distpicker/css/normalize.css",
+            "type": "css"
+        },
+        "lib/js/distpicker/dist/distpicker.data.js": {
+            "uri": "/lib/js/distpicker/dist/distpicker.data.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/dist/distpicker.data.min.js": {
+            "uri": "/lib/js/distpicker/dist/distpicker.data.min.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/dist/distpicker.js": {
+            "uri": "/lib/js/distpicker/dist/distpicker.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/dist/distpicker.min.js": {
+            "uri": "/lib/js/distpicker/dist/distpicker.min.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/js/distpicker.data.js": {
+            "uri": "/lib/js/distpicker/js/distpicker.data.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/js/distpicker.js": {
+            "uri": "/lib/js/distpicker/js/distpicker.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/js/jquery-1.11.0.min.js": {
+            "uri": "/lib/js/distpicker/js/jquery-1.11.0.min.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/js/main.js": {
+            "uri": "/lib/js/distpicker/js/main.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/src/distpicker.data.js": {
+            "uri": "/lib/js/distpicker/src/distpicker.data.js",
+            "type": "js"
+        },
+        "lib/js/distpicker/src/distpicker.js": {
+            "uri": "/lib/js/distpicker/src/distpicker.js",
+            "type": "js"
+        },
+        "lib/js/jquery/dist/core.js": {
+            "uri": "/lib/js/jquery/dist/core.js",
+            "type": "js"
+        },
+        "lib/js/jquery/dist/jquery.js": {
+            "uri": "/lib/js/jquery/dist/jquery.js",
+            "type": "js"
+        },
+        "lib/js/jquery/dist/jquery.min.js": {
+            "uri": "/lib/js/jquery/dist/jquery.min.js",
+            "type": "js"
+        },
+        "lib/js/jquery/dist/jquery.slim.js": {
+            "uri": "/lib/js/jquery/dist/jquery.slim.js",
+            "type": "js"
+        },
+        "lib/js/jquery/dist/jquery.slim.min.js": {
+            "uri": "/lib/js/jquery/dist/jquery.slim.min.js",
+            "type": "js"
+        },
+        "lib/js/jquery/external/sizzle/dist/sizzle.js": {
+            "uri": "/lib/js/jquery/external/sizzle/dist/sizzle.js",
+            "type": "js"
+        },
+        "lib/js/jquery/external/sizzle/dist/sizzle.min.js": {
+            "uri": "/lib/js/jquery/external/sizzle/dist/sizzle.min.js",
+            "type": "js",
+            "extras": {}
+        },
+        "lib/js/jquery/src/ajax.js": {
+            "uri": "/lib/js/jquery/src/ajax.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/jsonp.js": {
+            "uri": "/lib/js/jquery/src/ajax/jsonp.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/load.js": {
+            "uri": "/lib/js/jquery/src/ajax/load.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/parseXML.js": {
+            "uri": "/lib/js/jquery/src/ajax/parseXML.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/script.js": {
+            "uri": "/lib/js/jquery/src/ajax/script.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/var/location.js": {
+            "uri": "/lib/js/jquery/src/ajax/var/location.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/var/nonce.js": {
+            "uri": "/lib/js/jquery/src/ajax/var/nonce.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/var/rquery.js": {
+            "uri": "/lib/js/jquery/src/ajax/var/rquery.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/ajax/xhr.js": {
+            "uri": "/lib/js/jquery/src/ajax/xhr.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/attributes.js": {
+            "uri": "/lib/js/jquery/src/attributes.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/attributes/attr.js": {
+            "uri": "/lib/js/jquery/src/attributes/attr.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/attributes/classes.js": {
+            "uri": "/lib/js/jquery/src/attributes/classes.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/attributes/prop.js": {
+            "uri": "/lib/js/jquery/src/attributes/prop.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/attributes/support.js": {
+            "uri": "/lib/js/jquery/src/attributes/support.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/attributes/val.js": {
+            "uri": "/lib/js/jquery/src/attributes/val.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/callbacks.js": {
+            "uri": "/lib/js/jquery/src/callbacks.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core.js": {
+            "uri": "/lib/js/jquery/src/core.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/access.js": {
+            "uri": "/lib/js/jquery/src/core/access.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/DOMEval.js": {
+            "uri": "/lib/js/jquery/src/core/DOMEval.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/init.js": {
+            "uri": "/lib/js/jquery/src/core/init.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/parseHTML.js": {
+            "uri": "/lib/js/jquery/src/core/parseHTML.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/ready-no-deferred.js": {
+            "uri": "/lib/js/jquery/src/core/ready-no-deferred.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/ready.js": {
+            "uri": "/lib/js/jquery/src/core/ready.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/readyException.js": {
+            "uri": "/lib/js/jquery/src/core/readyException.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/stripAndCollapse.js": {
+            "uri": "/lib/js/jquery/src/core/stripAndCollapse.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/support.js": {
+            "uri": "/lib/js/jquery/src/core/support.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/core/var/rsingleTag.js": {
+            "uri": "/lib/js/jquery/src/core/var/rsingleTag.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css.js": {
+            "uri": "/lib/js/jquery/src/css.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/addGetHookIf.js": {
+            "uri": "/lib/js/jquery/src/css/addGetHookIf.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/adjustCSS.js": {
+            "uri": "/lib/js/jquery/src/css/adjustCSS.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/curCSS.js": {
+            "uri": "/lib/js/jquery/src/css/curCSS.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/hiddenVisibleSelectors.js": {
+            "uri": "/lib/js/jquery/src/css/hiddenVisibleSelectors.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/showHide.js": {
+            "uri": "/lib/js/jquery/src/css/showHide.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/support.js": {
+            "uri": "/lib/js/jquery/src/css/support.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/var/cssExpand.js": {
+            "uri": "/lib/js/jquery/src/css/var/cssExpand.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/var/getStyles.js": {
+            "uri": "/lib/js/jquery/src/css/var/getStyles.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/var/isHiddenWithinTree.js": {
+            "uri": "/lib/js/jquery/src/css/var/isHiddenWithinTree.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/var/rmargin.js": {
+            "uri": "/lib/js/jquery/src/css/var/rmargin.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/var/rnumnonpx.js": {
+            "uri": "/lib/js/jquery/src/css/var/rnumnonpx.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/css/var/swap.js": {
+            "uri": "/lib/js/jquery/src/css/var/swap.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/data.js": {
+            "uri": "/lib/js/jquery/src/data.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/data/Data.js": {
+            "uri": "/lib/js/jquery/src/data/Data.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/data/var/acceptData.js": {
+            "uri": "/lib/js/jquery/src/data/var/acceptData.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/data/var/dataPriv.js": {
+            "uri": "/lib/js/jquery/src/data/var/dataPriv.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/data/var/dataUser.js": {
+            "uri": "/lib/js/jquery/src/data/var/dataUser.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/deferred.js": {
+            "uri": "/lib/js/jquery/src/deferred.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/deferred/exceptionHook.js": {
+            "uri": "/lib/js/jquery/src/deferred/exceptionHook.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/deprecated.js": {
+            "uri": "/lib/js/jquery/src/deprecated.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/dimensions.js": {
+            "uri": "/lib/js/jquery/src/dimensions.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/effects.js": {
+            "uri": "/lib/js/jquery/src/effects.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/effects/animatedSelector.js": {
+            "uri": "/lib/js/jquery/src/effects/animatedSelector.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/effects/Tween.js": {
+            "uri": "/lib/js/jquery/src/effects/Tween.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/event.js": {
+            "uri": "/lib/js/jquery/src/event.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/event/ajax.js": {
+            "uri": "/lib/js/jquery/src/event/ajax.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/event/alias.js": {
+            "uri": "/lib/js/jquery/src/event/alias.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/event/focusin.js": {
+            "uri": "/lib/js/jquery/src/event/focusin.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/event/support.js": {
+            "uri": "/lib/js/jquery/src/event/support.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/event/trigger.js": {
+            "uri": "/lib/js/jquery/src/event/trigger.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/exports/amd.js": {
+            "uri": "/lib/js/jquery/src/exports/amd.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/exports/global.js": {
+            "uri": "/lib/js/jquery/src/exports/global.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/jquery.js": {
+            "uri": "/lib/js/jquery/src/jquery.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation.js": {
+            "uri": "/lib/js/jquery/src/manipulation.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/_evalUrl.js": {
+            "uri": "/lib/js/jquery/src/manipulation/_evalUrl.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/buildFragment.js": {
+            "uri": "/lib/js/jquery/src/manipulation/buildFragment.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/getAll.js": {
+            "uri": "/lib/js/jquery/src/manipulation/getAll.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/setGlobalEval.js": {
+            "uri": "/lib/js/jquery/src/manipulation/setGlobalEval.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/support.js": {
+            "uri": "/lib/js/jquery/src/manipulation/support.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/var/rcheckableType.js": {
+            "uri": "/lib/js/jquery/src/manipulation/var/rcheckableType.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/var/rscriptType.js": {
+            "uri": "/lib/js/jquery/src/manipulation/var/rscriptType.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/var/rtagName.js": {
+            "uri": "/lib/js/jquery/src/manipulation/var/rtagName.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/manipulation/wrapMap.js": {
+            "uri": "/lib/js/jquery/src/manipulation/wrapMap.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/offset.js": {
+            "uri": "/lib/js/jquery/src/offset.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/queue.js": {
+            "uri": "/lib/js/jquery/src/queue.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/queue/delay.js": {
+            "uri": "/lib/js/jquery/src/queue/delay.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/selector-native.js": {
+            "uri": "/lib/js/jquery/src/selector-native.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/selector-sizzle.js": {
+            "uri": "/lib/js/jquery/src/selector-sizzle.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/selector.js": {
+            "uri": "/lib/js/jquery/src/selector.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/serialize.js": {
+            "uri": "/lib/js/jquery/src/serialize.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/traversing.js": {
+            "uri": "/lib/js/jquery/src/traversing.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/traversing/findFilter.js": {
+            "uri": "/lib/js/jquery/src/traversing/findFilter.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/traversing/var/dir.js": {
+            "uri": "/lib/js/jquery/src/traversing/var/dir.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/traversing/var/rneedsContext.js": {
+            "uri": "/lib/js/jquery/src/traversing/var/rneedsContext.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/traversing/var/siblings.js": {
+            "uri": "/lib/js/jquery/src/traversing/var/siblings.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/arr.js": {
+            "uri": "/lib/js/jquery/src/var/arr.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/class2type.js": {
+            "uri": "/lib/js/jquery/src/var/class2type.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/concat.js": {
+            "uri": "/lib/js/jquery/src/var/concat.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/document.js": {
+            "uri": "/lib/js/jquery/src/var/document.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/documentElement.js": {
+            "uri": "/lib/js/jquery/src/var/documentElement.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/fnToString.js": {
+            "uri": "/lib/js/jquery/src/var/fnToString.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/getProto.js": {
+            "uri": "/lib/js/jquery/src/var/getProto.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/hasOwn.js": {
+            "uri": "/lib/js/jquery/src/var/hasOwn.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/indexOf.js": {
+            "uri": "/lib/js/jquery/src/var/indexOf.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/ObjectFunctionString.js": {
+            "uri": "/lib/js/jquery/src/var/ObjectFunctionString.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/pnum.js": {
+            "uri": "/lib/js/jquery/src/var/pnum.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/push.js": {
+            "uri": "/lib/js/jquery/src/var/push.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/rcssNum.js": {
+            "uri": "/lib/js/jquery/src/var/rcssNum.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/rnothtmlwhite.js": {
+            "uri": "/lib/js/jquery/src/var/rnothtmlwhite.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/slice.js": {
+            "uri": "/lib/js/jquery/src/var/slice.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/support.js": {
+            "uri": "/lib/js/jquery/src/var/support.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/var/toString.js": {
+            "uri": "/lib/js/jquery/src/var/toString.js",
+            "type": "js"
+        },
+        "lib/js/jquery/src/wrap.js": {
+            "uri": "/lib/js/jquery/src/wrap.js",
+            "type": "js"
+        },
+        "lib/js/layer/layer/layer.js": {
+            "uri": "/lib/js/layer/layer/layer.js",
+            "type": "js"
+        },
+        "lib/js/layer/layer/skin/layer.css": {
+            "uri": "/lib/js/layer/layer/skin/layer.css",
+            "type": "css"
+        },
+        "lib/js/laypage/laypage.js": {
+            "uri": "/lib/js/laypage/laypage.js",
+            "type": "js"
+        },
+        "lib/js/laypage/skin/laypage.css": {
+            "uri": "/lib/js/laypage/skin/laypage.css",
+            "type": "css"
+        },
+        "lib/js/vue-resource/dist/vue-resource.common.js": {
+            "uri": "/lib/js/vue-resource/dist/vue-resource.common.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/dist/vue-resource.es2015.js": {
+            "uri": "/lib/js/vue-resource/dist/vue-resource.es2015.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/dist/vue-resource.js": {
+            "uri": "/lib/js/vue-resource/dist/vue-resource.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/dist/vue-resource.min.js": {
+            "uri": "/lib/js/vue-resource/dist/vue-resource.min.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/client/index.js": {
+            "uri": "/lib/js/vue-resource/src/http/client/index.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/client/jsonp.js": {
+            "uri": "/lib/js/vue-resource/src/http/client/jsonp.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/client/xdr.js": {
+            "uri": "/lib/js/vue-resource/src/http/client/xdr.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/client/xhr.js": {
+            "uri": "/lib/js/vue-resource/src/http/client/xhr.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/headers.js": {
+            "uri": "/lib/js/vue-resource/src/http/headers.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/index.js": {
+            "uri": "/lib/js/vue-resource/src/http/index.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/before.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/before.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/body.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/body.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/cors.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/cors.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/header.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/header.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/jsonp.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/jsonp.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/method.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/method.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/interceptor/timeout.js": {
+            "uri": "/lib/js/vue-resource/src/http/interceptor/timeout.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/request.js": {
+            "uri": "/lib/js/vue-resource/src/http/request.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/http/response.js": {
+            "uri": "/lib/js/vue-resource/src/http/response.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/index.js": {
+            "uri": "/lib/js/vue-resource/src/index.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/lib/promise.js": {
+            "uri": "/lib/js/vue-resource/src/lib/promise.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/lib/url-template.js": {
+            "uri": "/lib/js/vue-resource/src/lib/url-template.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/promise.js": {
+            "uri": "/lib/js/vue-resource/src/promise.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/resource.js": {
+            "uri": "/lib/js/vue-resource/src/resource.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/url/index.js": {
+            "uri": "/lib/js/vue-resource/src/url/index.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/url/query.js": {
+            "uri": "/lib/js/vue-resource/src/url/query.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/url/root.js": {
+            "uri": "/lib/js/vue-resource/src/url/root.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/url/template.js": {
+            "uri": "/lib/js/vue-resource/src/url/template.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/src/util.js": {
+            "uri": "/lib/js/vue-resource/src/util.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/test/http.js": {
+            "uri": "/lib/js/vue-resource/test/http.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/test/index.js": {
+            "uri": "/lib/js/vue-resource/test/index.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/test/promise.js": {
+            "uri": "/lib/js/vue-resource/test/promise.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/test/resource.js": {
+            "uri": "/lib/js/vue-resource/test/resource.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/test/url.js": {
+            "uri": "/lib/js/vue-resource/test/url.js",
+            "type": "js"
+        },
+        "lib/js/vue-resource/test/webpack.config.js": {
+            "uri": "/lib/js/vue-resource/test/webpack.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/big-table/demo.css": {
+            "uri": "/lib/js/vue/benchmarks/big-table/demo.css",
+            "type": "css"
+        },
+        "lib/js/vue/benchmarks/big-table/style.css": {
+            "uri": "/lib/js/vue/benchmarks/big-table/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/benchmarks/dbmon/app.js": {
+            "uri": "/lib/js/vue/benchmarks/dbmon/app.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/dbmon/ENV.js": {
+            "uri": "/lib/js/vue/benchmarks/dbmon/ENV.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/dbmon/lib/bootstrap.min.css": {
+            "uri": "/lib/js/vue/benchmarks/dbmon/lib/bootstrap.min.css",
+            "type": "css"
+        },
+        "lib/js/vue/benchmarks/dbmon/lib/memory-stats.js": {
+            "uri": "/lib/js/vue/benchmarks/dbmon/lib/memory-stats.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/dbmon/lib/monitor.js": {
+            "uri": "/lib/js/vue/benchmarks/dbmon/lib/monitor.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/dbmon/lib/styles.css": {
+            "uri": "/lib/js/vue/benchmarks/dbmon/lib/styles.css",
+            "type": "css"
+        },
+        "lib/js/vue/benchmarks/ssr/common.js": {
+            "uri": "/lib/js/vue/benchmarks/ssr/common.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/ssr/renderToStream.js": {
+            "uri": "/lib/js/vue/benchmarks/ssr/renderToStream.js",
+            "type": "js"
+        },
+        "lib/js/vue/benchmarks/ssr/renderToString.js": {
+            "uri": "/lib/js/vue/benchmarks/ssr/renderToString.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/alias.js": {
+            "uri": "/lib/js/vue/build/alias.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/build.js": {
+            "uri": "/lib/js/vue/build/build.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/config.js": {
+            "uri": "/lib/js/vue/build/config.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/get-weex-version.js": {
+            "uri": "/lib/js/vue/build/get-weex-version.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/karma.base.config.js": {
+            "uri": "/lib/js/vue/build/karma.base.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/karma.cover.config.js": {
+            "uri": "/lib/js/vue/build/karma.cover.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/karma.dev.config.js": {
+            "uri": "/lib/js/vue/build/karma.dev.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/karma.sauce.config.js": {
+            "uri": "/lib/js/vue/build/karma.sauce.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/karma.unit.config.js": {
+            "uri": "/lib/js/vue/build/karma.unit.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/build/nightwatch.config.js": {
+            "uri": "/lib/js/vue/build/nightwatch.config.js",
+            "type": "js"
+        },
+        "lib/js/vue/dist/vue.common.js": {
+            "uri": "/lib/js/vue/dist/vue.common.js",
+            "type": "js"
+        },
+        "lib/js/vue/dist/vue.js": {
+            "uri": "/lib/js/vue/dist/vue.js",
+            "type": "js"
+        },
+        "lib/js/vue/dist/vue.min.js": {
+            "uri": "/lib/js/vue/dist/vue.min.js",
+            "type": "js"
+        },
+        "lib/js/vue/dist/vue.runtime.common.js": {
+            "uri": "/lib/js/vue/dist/vue.runtime.common.js",
+            "type": "js"
+        },
+        "lib/js/vue/dist/vue.runtime.js": {
+            "uri": "/lib/js/vue/dist/vue.runtime.js",
+            "type": "js"
+        },
+        "lib/js/vue/dist/vue.runtime.min.js": {
+            "uri": "/lib/js/vue/dist/vue.runtime.min.js",
+            "type": "js"
+        },
+        "lib/js/vue/examples/commits/app.js": {
+            "uri": "/lib/js/vue/examples/commits/app.js",
+            "type": "js"
+        },
+        "lib/js/vue/examples/elastic-header/style.css": {
+            "uri": "/lib/js/vue/examples/elastic-header/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/examples/firebase/app.js": {
+            "uri": "/lib/js/vue/examples/firebase/app.js",
+            "type": "js"
+        },
+        "lib/js/vue/examples/firebase/style.css": {
+            "uri": "/lib/js/vue/examples/firebase/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/examples/grid/grid.js": {
+            "uri": "/lib/js/vue/examples/grid/grid.js",
+            "type": "js"
+        },
+        "lib/js/vue/examples/grid/style.css": {
+            "uri": "/lib/js/vue/examples/grid/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/examples/markdown/style.css": {
+            "uri": "/lib/js/vue/examples/markdown/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/examples/modal/style.css": {
+            "uri": "/lib/js/vue/examples/modal/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/examples/svg/style.css": {
+            "uri": "/lib/js/vue/examples/svg/style.css",
+            "type": "css"
+        },
+        "lib/js/vue/examples/svg/svg.js": {
+            "uri": "/lib/js/vue/examples/svg/svg.js",
+            "type": "js"
+        },
+        "lib/js/vue/examples/todomvc/app.js": {
+            "uri": "/lib/js/vue/examples/todomvc/app.js",
+            "type": "js"
+        },
+        "lib/js/vue/examples/tree/tree.js": {
+            "uri": "/lib/js/vue/examples/tree/tree.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/compiler.js": {
+            "uri": "/lib/js/vue/flow/compiler.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/component.js": {
+            "uri": "/lib/js/vue/flow/component.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/global-api.js": {
+            "uri": "/lib/js/vue/flow/global-api.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/modules.js": {
+            "uri": "/lib/js/vue/flow/modules.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/options.js": {
+            "uri": "/lib/js/vue/flow/options.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/ssr.js": {
+            "uri": "/lib/js/vue/flow/ssr.js",
+            "type": "js"
+        },
+        "lib/js/vue/flow/vnode.js": {
+            "uri": "/lib/js/vue/flow/vnode.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/vue-server-renderer/build.js": {
+            "uri": "/lib/js/vue/packages/vue-server-renderer/build.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/vue-server-renderer/index.js": {
+            "uri": "/lib/js/vue/packages/vue-server-renderer/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/vue-template-compiler/build.js": {
+            "uri": "/lib/js/vue/packages/vue-template-compiler/build.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/vue-template-compiler/index.js": {
+            "uri": "/lib/js/vue/packages/vue-template-compiler/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/weex-template-compiler/build.js": {
+            "uri": "/lib/js/vue/packages/weex-template-compiler/build.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/weex-template-compiler/index.js": {
+            "uri": "/lib/js/vue/packages/weex-template-compiler/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/packages/weex-vue-framework/index.js": {
+            "uri": "/lib/js/vue/packages/weex-vue-framework/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/codegen/events.js": {
+            "uri": "/lib/js/vue/src/compiler/codegen/events.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/codegen/index.js": {
+            "uri": "/lib/js/vue/src/compiler/codegen/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/directives/bind.js": {
+            "uri": "/lib/js/vue/src/compiler/directives/bind.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/directives/index.js": {
+            "uri": "/lib/js/vue/src/compiler/directives/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/error-detector.js": {
+            "uri": "/lib/js/vue/src/compiler/error-detector.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/helpers.js": {
+            "uri": "/lib/js/vue/src/compiler/helpers.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/index.js": {
+            "uri": "/lib/js/vue/src/compiler/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/optimizer.js": {
+            "uri": "/lib/js/vue/src/compiler/optimizer.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/parser/entity-decoder.js": {
+            "uri": "/lib/js/vue/src/compiler/parser/entity-decoder.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/parser/filter-parser.js": {
+            "uri": "/lib/js/vue/src/compiler/parser/filter-parser.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/parser/html-parser.js": {
+            "uri": "/lib/js/vue/src/compiler/parser/html-parser.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/parser/index.js": {
+            "uri": "/lib/js/vue/src/compiler/parser/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/compiler/parser/text-parser.js": {
+            "uri": "/lib/js/vue/src/compiler/parser/text-parser.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/components/index.js": {
+            "uri": "/lib/js/vue/src/core/components/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/components/keep-alive.js": {
+            "uri": "/lib/js/vue/src/core/components/keep-alive.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/config.js": {
+            "uri": "/lib/js/vue/src/core/config.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/global-api/assets.js": {
+            "uri": "/lib/js/vue/src/core/global-api/assets.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/global-api/extend.js": {
+            "uri": "/lib/js/vue/src/core/global-api/extend.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/global-api/index.js": {
+            "uri": "/lib/js/vue/src/core/global-api/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/global-api/mixin.js": {
+            "uri": "/lib/js/vue/src/core/global-api/mixin.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/global-api/use.js": {
+            "uri": "/lib/js/vue/src/core/global-api/use.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/index.js": {
+            "uri": "/lib/js/vue/src/core/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/events.js": {
+            "uri": "/lib/js/vue/src/core/instance/events.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/index.js": {
+            "uri": "/lib/js/vue/src/core/instance/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/init.js": {
+            "uri": "/lib/js/vue/src/core/instance/init.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/lifecycle.js": {
+            "uri": "/lib/js/vue/src/core/instance/lifecycle.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/proxy.js": {
+            "uri": "/lib/js/vue/src/core/instance/proxy.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/render.js": {
+            "uri": "/lib/js/vue/src/core/instance/render.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/instance/state.js": {
+            "uri": "/lib/js/vue/src/core/instance/state.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/observer/array.js": {
+            "uri": "/lib/js/vue/src/core/observer/array.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/observer/dep.js": {
+            "uri": "/lib/js/vue/src/core/observer/dep.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/observer/index.js": {
+            "uri": "/lib/js/vue/src/core/observer/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/observer/scheduler.js": {
+            "uri": "/lib/js/vue/src/core/observer/scheduler.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/observer/watcher.js": {
+            "uri": "/lib/js/vue/src/core/observer/watcher.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/util/debug.js": {
+            "uri": "/lib/js/vue/src/core/util/debug.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/util/env.js": {
+            "uri": "/lib/js/vue/src/core/util/env.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/util/index.js": {
+            "uri": "/lib/js/vue/src/core/util/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/util/lang.js": {
+            "uri": "/lib/js/vue/src/core/util/lang.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/util/options.js": {
+            "uri": "/lib/js/vue/src/core/util/options.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/util/props.js": {
+            "uri": "/lib/js/vue/src/core/util/props.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/create-component.js": {
+            "uri": "/lib/js/vue/src/core/vdom/create-component.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/create-element.js": {
+            "uri": "/lib/js/vue/src/core/vdom/create-element.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/helpers/index.js": {
+            "uri": "/lib/js/vue/src/core/vdom/helpers/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/helpers/merge-hook.js": {
+            "uri": "/lib/js/vue/src/core/vdom/helpers/merge-hook.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/helpers/normalize-children.js": {
+            "uri": "/lib/js/vue/src/core/vdom/helpers/normalize-children.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/helpers/update-listeners.js": {
+            "uri": "/lib/js/vue/src/core/vdom/helpers/update-listeners.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/modules/directives.js": {
+            "uri": "/lib/js/vue/src/core/vdom/modules/directives.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/modules/index.js": {
+            "uri": "/lib/js/vue/src/core/vdom/modules/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/modules/ref.js": {
+            "uri": "/lib/js/vue/src/core/vdom/modules/ref.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/patch.js": {
+            "uri": "/lib/js/vue/src/core/vdom/patch.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/core/vdom/vnode.js": {
+            "uri": "/lib/js/vue/src/core/vdom/vnode.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/entries/web-compiler.js": {
+            "uri": "/lib/js/vue/src/entries/web-compiler.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/entries/web-runtime-with-compiler.js": {
+            "uri": "/lib/js/vue/src/entries/web-runtime-with-compiler.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/entries/web-runtime.js": {
+            "uri": "/lib/js/vue/src/entries/web-runtime.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/entries/web-server-renderer.js": {
+            "uri": "/lib/js/vue/src/entries/web-server-renderer.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/entries/weex-compiler.js": {
+            "uri": "/lib/js/vue/src/entries/weex-compiler.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/entries/weex-framework.js": {
+            "uri": "/lib/js/vue/src/entries/weex-framework.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/directives/html.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/directives/html.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/directives/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/directives/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/directives/model.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/directives/model.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/directives/text.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/directives/text.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/modules/class.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/modules/class.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/modules/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/modules/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/modules/style.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/modules/style.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/compiler/util.js": {
+            "uri": "/lib/js/vue/src/platforms/web/compiler/util.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/class-util.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/class-util.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/components/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/components/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/components/transition-group.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/components/transition-group.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/components/transition.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/components/transition.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/directives/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/directives/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/directives/model.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/directives/model.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/directives/show.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/directives/show.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/attrs.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/attrs.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/class.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/class.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/dom-props.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/dom-props.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/events.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/events.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/style.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/style.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/modules/transition.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/modules/transition.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/node-ops.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/node-ops.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/patch.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/patch.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/runtime/transition-util.js": {
+            "uri": "/lib/js/vue/src/platforms/web/runtime/transition-util.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/directives/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/directives/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/directives/show.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/directives/show.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/modules/attrs.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/modules/attrs.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/modules/class.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/modules/class.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/modules/dom-props.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/modules/dom-props.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/modules/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/modules/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/modules/style.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/modules/style.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/server/util.js": {
+            "uri": "/lib/js/vue/src/platforms/web/server/util.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/util/attrs.js": {
+            "uri": "/lib/js/vue/src/platforms/web/util/attrs.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/util/class.js": {
+            "uri": "/lib/js/vue/src/platforms/web/util/class.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/util/compat.js": {
+            "uri": "/lib/js/vue/src/platforms/web/util/compat.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/util/element.js": {
+            "uri": "/lib/js/vue/src/platforms/web/util/element.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/util/index.js": {
+            "uri": "/lib/js/vue/src/platforms/web/util/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/web/util/style.js": {
+            "uri": "/lib/js/vue/src/platforms/web/util/style.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/directives/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/directives/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/directives/model.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/directives/model.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/modules/append.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/modules/append.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/modules/class.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/modules/class.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/modules/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/modules/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/compiler/modules/style.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/compiler/modules/style.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/framework.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/framework.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/config.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/config.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/directives/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/directives/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/modules/attrs.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/modules/attrs.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/modules/class.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/modules/class.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/modules/events.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/modules/events.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/modules/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/modules/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/modules/style.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/modules/style.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/node-ops.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/node-ops.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/runtime/patch.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/runtime/patch.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/platforms/weex/util/index.js": {
+            "uri": "/lib/js/vue/src/platforms/weex/util/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/server/create-bundle-renderer.js": {
+            "uri": "/lib/js/vue/src/server/create-bundle-renderer.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/server/create-renderer.js": {
+            "uri": "/lib/js/vue/src/server/create-renderer.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/server/render-stream.js": {
+            "uri": "/lib/js/vue/src/server/render-stream.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/server/render.js": {
+            "uri": "/lib/js/vue/src/server/render.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/server/run-in-vm.js": {
+            "uri": "/lib/js/vue/src/server/run-in-vm.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/server/write.js": {
+            "uri": "/lib/js/vue/src/server/write.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/sfc/parser.js": {
+            "uri": "/lib/js/vue/src/sfc/parser.js",
+            "type": "js"
+        },
+        "lib/js/vue/src/shared/util.js": {
+            "uri": "/lib/js/vue/src/shared/util.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/runner.js": {
+            "uri": "/lib/js/vue/test/e2e/runner.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/commits.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/commits.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/grid.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/grid.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/markdown.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/markdown.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/modal.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/modal.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/select2.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/select2.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/svg.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/svg.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/todomvc.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/todomvc.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/e2e/specs/tree.js": {
+            "uri": "/lib/js/vue/test/e2e/specs/tree.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/helpers/classlist.js": {
+            "uri": "/lib/js/vue/test/helpers/classlist.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/helpers/to-equal.js": {
+            "uri": "/lib/js/vue/test/helpers/to-equal.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/helpers/to-have-been-warned.js": {
+            "uri": "/lib/js/vue/test/helpers/to-have-been-warned.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/helpers/trigger-event.js": {
+            "uri": "/lib/js/vue/test/helpers/trigger-event.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/helpers/vdom.js": {
+            "uri": "/lib/js/vue/test/helpers/vdom.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/helpers/wait-for-update.js": {
+            "uri": "/lib/js/vue/test/helpers/wait-for-update.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/ssr/fixtures/app.js": {
+            "uri": "/lib/js/vue/test/ssr/fixtures/app.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/ssr/fixtures/cache.js": {
+            "uri": "/lib/js/vue/test/ssr/fixtures/cache.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/ssr/fixtures/error.js": {
+            "uri": "/lib/js/vue/test/ssr/fixtures/error.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/ssr/ssr-bundle-render.spec.js": {
+            "uri": "/lib/js/vue/test/ssr/ssr-bundle-render.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/ssr/ssr-stream.spec.js": {
+            "uri": "/lib/js/vue/test/ssr/ssr-stream.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/ssr/ssr-string.spec.js": {
+            "uri": "/lib/js/vue/test/ssr/ssr-string.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/component/component-async.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/component/component-async.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/component/component-keep-alive.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/component/component-keep-alive.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/component/component-scoped-slot.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/component/component-scoped-slot.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/component/component-slot.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/component/component-slot.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/component/component.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/component/component.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/bind.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/bind.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/class.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/class.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/cloak.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/cloak.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/for.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/for.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/html.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/html.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/if.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/if.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-checkbox.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-checkbox.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-component.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-component.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-dynamic.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-dynamic.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-file.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-file.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-parse.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-parse.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-radio.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-radio.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-select.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-select.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/model-text.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/model-text.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/on.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/on.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/once.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/once.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/pre.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/pre.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/show.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/show.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/static-style-parser.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/static-style-parser.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/style.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/style.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/directives/text.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/directives/text.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/filter/filter.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/filter/filter.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/assets.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/assets.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/compile.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/compile.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/config.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/config.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/extend.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/extend.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/mixin.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/mixin.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/set-delete.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/set-delete.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/global-api/use.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/global-api/use.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/instance/init.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/instance/init.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/instance/methods-data.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/instance/methods-data.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/instance/methods-events.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/instance/methods-events.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/instance/methods-lifecycle.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/instance/methods-lifecycle.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/instance/properties.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/instance/properties.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/instance/render-proxy.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/instance/render-proxy.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/_scopeId.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/_scopeId.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/components.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/components.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/computed.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/computed.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/data.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/data.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/delimiters.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/delimiters.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/directives.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/directives.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/el.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/el.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/extends.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/extends.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/functional.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/functional.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/lifecycle.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/lifecycle.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/methods.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/methods.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/mixins.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/mixins.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/name.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/name.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/parent.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/parent.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/props.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/props.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/propsData.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/propsData.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/render.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/render.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/template.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/template.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/options/watch.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/options/watch.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/ref.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/ref.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/transition/inject-styles.js": {
+            "uri": "/lib/js/vue/test/unit/features/transition/inject-styles.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/transition/transition-group.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/transition/transition-group.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/transition/transition-mode.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/transition/transition-mode.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/features/transition/transition.spec.js": {
+            "uri": "/lib/js/vue/test/unit/features/transition/transition.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/index.js": {
+            "uri": "/lib/js/vue/test/unit/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/compiler/codegen.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/compiler/codegen.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/compiler/compiler-options.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/compiler/compiler-options.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/compiler/optimizer.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/compiler/optimizer.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/compiler/parser.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/compiler/parser.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/observer/observer.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/observer/observer.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/observer/scheduler.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/observer/scheduler.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/observer/watcher.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/observer/watcher.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/sfc/sfc-parser.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/sfc/sfc-parser.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/util/next-tick.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/util/next-tick.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/create-component.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/create-component.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/create-element.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/create-element.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/modules/attrs.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/modules/attrs.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/modules/class.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/modules/class.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/modules/directive.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/modules/directive.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/modules/dom-props.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/modules/dom-props.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/modules/events.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/modules/events.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/modules/style.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/modules/style.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/patch/children.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/patch/children.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/patch/edge-cases.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/patch/edge-cases.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/patch/element.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/patch/element.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/patch/hooks.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/patch/hooks.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/unit/modules/vdom/patch/hydration.spec.js": {
+            "uri": "/lib/js/vue/test/unit/modules/vdom/patch/hydration.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/compiler/append.spec.js": {
+            "uri": "/lib/js/vue/test/weex/compiler/append.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/compiler/class.spec.js": {
+            "uri": "/lib/js/vue/test/weex/compiler/class.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/compiler/compile.spec.js": {
+            "uri": "/lib/js/vue/test/weex/compiler/compile.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/compiler/style.spec.js": {
+            "uri": "/lib/js/vue/test/weex/compiler/style.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/compiler/v-model.spec.js": {
+            "uri": "/lib/js/vue/test/weex/compiler/v-model.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/helpers/index.js": {
+            "uri": "/lib/js/vue/test/weex/helpers/index.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/runtime/attrs.spec.js": {
+            "uri": "/lib/js/vue/test/weex/runtime/attrs.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/runtime/class.spec.js": {
+            "uri": "/lib/js/vue/test/weex/runtime/class.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/runtime/events.spec.js": {
+            "uri": "/lib/js/vue/test/weex/runtime/events.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/runtime/framework.spec.js": {
+            "uri": "/lib/js/vue/test/weex/runtime/framework.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/runtime/node.spec.js": {
+            "uri": "/lib/js/vue/test/weex/runtime/node.spec.js",
+            "type": "js"
+        },
+        "lib/js/vue/test/weex/runtime/style.spec.js": {
+            "uri": "/lib/js/vue/test/weex/runtime/style.spec.js",
+            "type": "js"
+        },
+        "lib/mod.js": {
+            "uri": "/lib/mod.js",
+            "type": "js"
+        },
+        "lib/study.js": {
+            "uri": "/lib/study.js",
+            "type": "js"
+        },
+        "modules/css/config.scss": {
+            "uri": "/static/css/config.css",
+            "type": "css"
+        },
+        "modules/css/index.scss": {
+            "uri": "/static/css/index.css",
+            "type": "css"
+        },
+        "modules/app/index.js": {
+            "uri": "/static/app/index.js",
+            "type": "js"
+        },
+        "modules/html/footer/footer.scss": {
+            "uri": "/static/html/footer/footer.css",
+            "type": "css"
+        },
+        "modules/html/header/header.scss": {
+            "uri": "/static/html/header/header.css",
+            "type": "css"
+        },
+        "modules/css/showexam.scss": {
+            "uri": "/static/css/showexam.css",
+            "type": "css"
+        },
+        "modules/app/showexam.js": {
+            "uri": "/static/app/showexam.js",
+            "type": "js"
+        }
+    },
+    "pkg": {}
+}

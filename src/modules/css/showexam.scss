@@ -17,13 +17,13 @@
     > .title {
         font-size: 30px;
         color: #414141;
-        line-height: 110px;
+        line-height: 70px;
         text-align: center;
     }
 
     > p {
         margin: 0;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         font-size: 12px;
         text-align: center;
         color: #7f7f7f;
@@ -39,7 +39,7 @@
     // 你的得分
     > .allscore {
         float: left;
-        height: 320px;
+        height: 300px;
         width: 300px;
         border: 1px solid #cec8c8;
         box-sizing: border-box;
@@ -76,13 +76,13 @@
                 font-weight: 200;
                 color: #efb116;
                 font-size: 185px;
-                line-height: 185px;
+                line-height: 130px;
             }
         }
     }
     // 得分列表
     > .scoreList {
-        height: 350px;
+        height: 300px;
         width: 880px;
         float: right;
         box-sizing: border-box;
@@ -109,7 +109,8 @@
                     text-align: center;
                     height: 20%;
                     font-size: 18px;
-                    line-height: 70px;
+                    line-height: 60px;
+                    height: 60px;
                     color: #2a2a2a;
                 }
 
@@ -322,11 +323,11 @@
                   font-weight: 700;
                 }
               }
-              >.trueanswer{
+              >.falseanswer{
                 color: #e4282c;
                 border: 1px solid #e4282c;
               }
-              >.falseanswer{
+              >.trueanswer{
                 color: #2faa2c;
                 border: 1px solid #2faa2c;
               }

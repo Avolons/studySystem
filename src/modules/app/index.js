@@ -2,10 +2,11 @@
 // SubmitAnswer 提交答案（userExamId，考试id为参数）
 // GetExamInfoHaveAnswer 获得试卷详细信息
 // GetUserExamChart 获得详细信息上面的统计图
-// StorageAnswer 缓存答案（userExamId，考试id为参数）
+// StorageAnswer 缓存答案（userExamId，考试id为参数;currentQuestionIndex,当前题号）
 // GetExamPreview 考试预览信息
 //AddDepartureTimes 新增离开页面次数，（userExamId，考试id为参数）、、、、
 //GetExamPreview 考试预览页面
+//ReduceExaminationTime 当前剩余考试时间 userExamid考试id，second,时间
 var App = new Vue({
     el: "#vue-container",
     data: function() {
@@ -31,13 +32,17 @@ var App = new Vue({
                 val: 0,
                 isshow: false,
             }, ],
-            qstData: {}, //试卷内容对象
+            qstData: {
+              QuestionsItems:[]
+            }, //试卷内容对象
             answerList: [], //答案对象
             nowTime: "00:00:00", //剩余时间
             numbertime: null, //真实时间
             timer: null, //当前的定时器
             wrongTime: 0, //当前网络的错误次数
             showIndex: 0, //当前显示的题目index值
+            single:false,//单题不可逆
+            singleback:false,//单题可逆
         };
     },
     //方法逻辑判断区域
@@ -98,10 +103,15 @@ var App = new Vue({
         getNewQest: function(direction) {
             //direction为true，为下一题
             if (direction) {
-
+              this.qstData.QuestionsItems[this.showIndex].isshow=true;
+              this.showIndex++;
+              this.qstData.QuestionsItems[this.showIndex].isshow=false;
             } else {
-
+              this.qstData.QuestionsItems[this.showIndex].isshow=true;
+              this.showIndex--;
+              this.qstData.QuestionsItems[this.showIndex].isshow=false;
             }
+            this.sendanswer("http://192.168.1.102/home/StorageAnswer");
         },
         //******点击显示对应题目
         rightcheck: function(index, type) {
@@ -255,11 +265,22 @@ var App = new Vue({
             }, 1000);
 
         },
+        //******窗口变化大小，刷新，或者离开当前页面，或者关闭页面，都会触发此函数。
+        addLeaveTimes:function(){
+          //AddDepartureTimes
+          //******发送时间
+          $.post("http://192.168.1.102/home/ReduceExaminationTime",{
+            userExamId:this.qstData.Id,//考试id
+            second:this.numbertime,//真实时间
+          },function(){
+
+          });
+        },
         //******以下都是对答案的处理函数
         //******发送答案，绑定提交试卷
         sendanswer: function(url) {
-            url = url || "http://192.168.1.5/home/SubmitAnswer";
-            //进行最终的答案结构一体化
+            url = url || "http://192.168.1.102/home/SubmitAnswer";
+            //进行最终的答案结构一体化,深拷贝
             var arrobj = JSON.parse(JSON.stringify(this.answerList));
             for (var i = 0; i < arrobj.length; i++) {
                 //多选题的数组对象要改成字符串对象
@@ -276,27 +297,32 @@ var App = new Vue({
                 }
             }
             //进行最终的答案发送
+            // console.log(arrobj);
             arrobj = JSON.stringify(arrobj);
-            // $.post(url, {
-            //     body: arrobj,
-            // }, function() {
-            //
-            // });
-            this.$http.post(url,{body: arrobj}).then((response) => {
+            $.post(url,{
+              body:arrobj,
+              userExamId:this.qstData.Id,//考试id
+              currentQuestionIndex:this.showIndex,//单题情况下的index值
+            },function(){
 
-            }, (error) => {
+            });
+            //ReduceExaminationTime 当前剩余考试时间 userExamid考试id，second,时间
+            //******当前剩余时间
+            $.post("http://192.168.1.102/home/ReduceExaminationTime",{
+              userExamId:this.qstData.Id,//考试id
+              second:this.numbertime,//真实时间
+            },function(){
 
             });
         },
         //******定时保存答案,五分钟一次
         saveanswer: function() {
-            var url = "http://192.168.1.5/home/StorageAnswer";
+            var url = "http://192.168.1.102/home/StorageAnswer";
             setInterval(function() {
                 //缓存答案;
                 App.sendanswer(url);
                 // console.log(App.answerList);
-                //发送
-            }, 3e4);
+            }, 1e4);
         },
         //******取回答案的预先格式化
         getOldanswer: function(arrobj) {
@@ -314,61 +340,93 @@ var App = new Vue({
                     }
                 }
             }
+            return arrobj;
+        },
+        //******初次进入考试系统的时的初始化工作
+        firstInitialization:function(data,index){
+          //答案对象初始化
+          this.answerformatting(data.body.QuestionsItems);
+          //题目初始化
+          this.qstData = data.body;
+          //右侧列表初始化
+          this.rightType[0].val = data.body.QuestionsItems.length;
+          this.rightType[2].val = data.body.QuestionsItems.length;
+          // 时间初始化
+          this.numbertime = data.body.ExamLength * 60;
+          // 倒计时显示函数
+          this.timeover();
+          // 首先发送一次答案，防止出现不到30秒就关闭页面的情况
+          this.sendanswer("http://192.168.1.102/home/StorageAnswer");
+          this.saveanswer();
+          // 关闭等待层
+          layer.close(index);
         }
     },
     mounted: function() {
         var index = layer.load(0);
         //最初的数据请求，最初情况分三种,1.基本类型 2.单题目可逆 3.单题目不可逆
-        this.$http.get("http://127.0.0.1:8080/api/test").then((data) => {
+        this.$http.get("http://192.168.1.102/home/GetExamInfo").then((data) => {
             //单题目可逆和单题目不可逆,0:正常题目，1：单题可逆，2：单题不可逆
-            if (data.body.ShowQustionType !== 0) {
+            // 处于单题状态
+            if (data.body.ShowQuestoinType !== 0) {
                 //单题可逆
-                if (data.body.ShowQustionType === 1) {
-                    //判断当前题库是否处于初次打开状态
-                    if (data.body.IsFirstAnswer) {
-                      //答案对象初始化
-                      this.answerformatting(data.body.QuestionsItems);
-                      //题目初始化
-                      this.qstData = data.body;
-                    } else {
-
-                    }
+                if (data.body.ShowQuestoinType === 1) {
+                  this.singleback=true;
+                  // 单题不可逆
                 } else {
-                    //判断当前题库是否处于初次打开状态
-                    if (data.body.IsFirstAnswer) {
-                      //答案对象初始化
-                      this.answerformatting(data.body.QuestionsItems);
-                      //题目初始化
-                      this.qstData = data.body;
-                    } else {
-
-                    }
+                  this.single=true;
                 }
-                this.rightType[0].val = data.body.QuestionsItems.length;
-                this.rightType[2].val = data.body.QuestionsItems.length;
-                this.numbertime = data.body.ExamLength * 60;
-                this.timeover();
+                //判断当前题库是否处于初次打开状态
+                if (data.body.IsFirstAnswer) {
+                  this.firstInitialization(data,index);
+                  for (var i=0;i<this.qstData.QuestionsItems.length;i++) {
+                    //当前显示题目的index
+                    if(i!==this.showIndex){
+                      this.qstData.QuestionsItems[i].isshow=true;
+                    }
+                  }
+                } else {
+                  this.$http.get("http://192.168.1.102/home/GetUserExamAnswer").then((result) => {
+                      this.showIndex=data.body.CurrentQuestionIndex;
+                      this.qstData = data.body;
+                      this.answerList = this.getOldanswer(result.body);
+                      for (var i=0;i<this.qstData.QuestionsItems.length;i++) {
+                        //当前显示题目的index
+                        if(i!==this.showIndex){
+                          this.qstData.QuestionsItems[i].isshow=true;
+                        }
+                      }
+                      //数目统计初始化
+                      this.rightType[0].val = data.body.QuestionsItems.length;
+                      this.rightType[2].val = data.body.QuestionsItems.length;
+                      this.numbertime = data.body.ExamLength * 60;
+                      this.timeover();
+                      // this.saveanswer();
+                      layer.close(index);
+                  }, (error) => {
+
+                  });
+                }
+
             } else {
                 //正常答题情况下
+                //如果是第一次答题的话
                 if (data.body.IsFirstAnswer) {
-                    //答案对象初始化
-                    this.answerformatting(data.body.QuestionsItems);
-                    //题目初始化
-                    this.qstData = data.body;
-                    this.rightType[0].val = data.body.QuestionsItems.length;
-                    this.rightType[2].val = data.body.QuestionsItems.length;
-                    this.numbertime = data.body.ExamLength * 60;
-                    this.timeover();
-                    this.sendanswer("http://192.168.1.5/home/StorageAnswer");
-                    this.saveanswer();
-                    layer.close(index);
+                  this.firstInitialization(data,index);
                 } else {
-                    this.$http.get("http://192.168.1.5/home/GetUserExamAnswer").then((result) => {
+                    this.$http.get("http://192.168.1.102/home/GetUserExamAnswer").then((result) => {
+                      // 定位到上次回答到第几题
+                        this.showIndex=data.body.CurrentQuestionIndex;
                         this.qstData = data.body;
                         this.answerList = this.getOldanswer(result.body);
+                        //*******右侧统计数据初始化
+                        for(let i=0;i<this.answerList.length;i++){
+                          this.answerchange(this.answerList[i],this.qstData.QuestionsItems[i]);
+                        }
                         //数目统计初始化
                         this.rightType[0].val = data.body.QuestionsItems.length;
                         this.rightType[2].val = data.body.QuestionsItems.length;
+                        // 时间倒计时初始化
                         this.numbertime = data.body.ExamLength * 60;
                         this.timeover();
                         this.saveanswer();
@@ -379,5 +437,10 @@ var App = new Vue({
                 }
             }
         }, (error) => {});
+
+        //******用户离开当前页面，或者改变窗口大小，关闭窗口，刷新页面，都会触发此函数
+        window.onpagehide=this.addLeaveTimes();
+        window.onresize=this.addLeaveTimes();
+        window.onbeforeunload=this.addLeaveTimes();
     }
 });

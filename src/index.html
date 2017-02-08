@@ -10,7 +10,8 @@
 
 <body>
     <!-- 考试系统主体 -->
-    <div class="content single" id="vue-container" v-cloak>
+    <!-- single和singleback分别代表单题目可逆和单题目不可逆 -->
+    <div class="content" v-bind:class="{single:single,singleback:singleback}" id="vue-container" v-cloak>
         <!-- 固定的头部 -->
         <div id="fix-header">
             <!-- 头部显示区域，标题时间和倒计时 -->
@@ -112,7 +113,7 @@
                 <b>考试详情：</b>
                 <span>总分： {{qstData.TotalScore}}</span>
                 <span>及格分数： {{qstData.PassScore}}</span>
-                <span>考试时长： {{qstData.ExamLength}}</span>
+                <span>考试时长： {{qstData.TotalExamLength}}</span>
             </div>
             <!-- 题型导航条 -->
             <nav id="examtype">
@@ -122,8 +123,8 @@
                     <li v-for="item in qstData.QuestionsTypes" v-bind:class="{selected:item.isshow===true}" v-on:click="typeSel(item)">{{item.DisplayText}}</li>
                 </ul>
                 <div class="buttoncoll">
-                  <button type="button">上一题</button>
-                  <button type="button">下一题</button>
+                  <button type="button" v-show="showIndex!==0" v-on:click="getNewQest(false)">上一题</button>
+                  <button type="button" v-show="showIndex!==qstData.QuestionsItems.length-1" v-on:click="getNewQest(true)">下一题</button>
                 </div>
             </nav>
         </div>
@@ -301,8 +302,9 @@
                   </template>
                 </template>
             </article>
+
             <!-- 右侧题型关联区域 -->
-            <aside class="typeselect">
+            <aside class="typeselect" v-bind:class="{single:single||singleback}">
                 <div class="header">
                     <button type="button" v-on:click="sendanswer()">提交试卷</button>
                     <ul>

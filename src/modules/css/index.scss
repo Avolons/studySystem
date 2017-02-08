@@ -15,6 +15,7 @@
 //头部
 //******单题显示状态
 .buttoncoll{
+  display: none;
   height: 35px;
   padding-left: 15px;
   >{
@@ -42,6 +43,7 @@
       display: none;
     }
     >.buttoncoll{
+      display: block;
       button:first-of-type{
         display: none;
       }
@@ -51,11 +53,14 @@
 
 
 
-//******特殊情况一，单题可逆
+//******特殊情况二，单题可逆
 .singleback{
   #examtype{
     >ul{
       display: none;
+    }
+    >.buttoncoll{
+      display: block;
     }
   }
 }
@@ -376,7 +381,14 @@
     }
 }
 //右侧题目选择区域
-
+.single{
+  >nav{
+    display: none;
+  }
+  >.footer{
+    display: none;
+  }
+}
 .typeselect {
     position: fixed;
     top: 230px;

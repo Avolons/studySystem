@@ -1,0 +1,489 @@
+.content {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+#fix-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.buttoncoll {
+  display: none;
+  height: 35px;
+  padding-left: 15px;
+}
+
+.buttoncoll > button {
+  height: 100%;
+  width: 105px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #e4282c;
+  margin-right: 20px;
+}
+
+.buttoncoll > button:hover {
+  background-color: #f5565a;
+}
+
+.single #examtype > ul {
+  display: none;
+}
+
+.single #examtype > .buttoncoll {
+  display: block;
+}
+
+.single #examtype > .buttoncoll button:first-of-type {
+  display: none;
+}
+
+.singleback #examtype > ul {
+  display: none;
+}
+
+.singleback #examtype > .buttoncoll {
+  display: block;
+}
+
+#header {
+  position: relative;
+}
+
+#header > .title {
+  font-size: 30px;
+  color: #414141;
+  line-height: 110px;
+  text-align: center;
+}
+
+#header > .title > time {
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  font-size: 14px;
+  color: #414141;
+  height: 50px;
+  line-height: 50px;
+}
+
+#header > .title > time > b {
+  color: #e4282c;
+  font-size: 38px;
+  line-height: 50px;
+}
+
+#header > p {
+  display: none;
+  margin: 0;
+  padding-bottom: 30px;
+  font-size: 12px;
+  text-align: center;
+  color: #7f7f7f;
+}
+
+#scorearea {
+  display: none;
+  width: 1200px;
+  margin: 0 auto;
+  border-top: 1px dashed #c3c3c3;
+  padding: 15px 0;
+}
+
+#scorearea > .allscore {
+  float: left;
+  height: 320px;
+  width: 300px;
+  border: 1px solid #cec8c8;
+  box-sizing: border-box;
+}
+
+#scorearea > .allscore h2 {
+  font-weight: 400;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  color: #2a2a2a;
+  font-size: 18px;
+  text-indent: 35px;
+}
+
+#scorearea > .allscore h3 {
+  font-weight: 400;
+  background-color: #fef8f8;
+  height: calc(100% - 65px);
+  text-align: center;
+  color: #2a2a2a;
+  font-size: 18px;
+}
+
+#scorearea > .allscore h3 > span {
+  text-align: left;
+  color: #2a2a2a;
+  font-size: 18px;
+  text-indent: 35px;
+  display: block;
+  height: 65px;
+  line-height: 65px;
+}
+
+#scorearea > .allscore h3 > b {
+  font-weight: 200;
+  color: #f28e2d;
+  font-size: 185px;
+  line-height: 185px;
+}
+
+#scorearea > .scoreList {
+  height: 350px;
+  width: 880px;
+  float: right;
+  box-sizing: border-box;
+  border: 1px solid #d2d2d2;
+  border-right: none;
+  background-color: #f6f6f6;
+}
+
+#scorearea > .scoreList > ul {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+#scorearea > .scoreList > ul > li {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #d2d2d2;
+}
+
+#scorearea > .scoreList > ul > li > ul {
+  height: 100%;
+}
+
+#scorearea > .scoreList > ul > li li {
+  text-align: center;
+  height: 20%;
+  font-size: 18px;
+  line-height: 70px;
+  color: #2a2a2a;
+}
+
+#scorearea > .scoreList > ul > li :nth-of-type(4),
+#scorearea > .scoreList > ul > li li:nth-of-type(2) {
+  background-color: #ffffff;
+}
+
+#scorearea > .scoreList > ul > li:first-of-type {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  width: 160px;
+}
+
+#examinfo {
+  padding: 15px 25px;
+  background-color: #f7f7f7;
+}
+
+#examinfo > b {
+  color: #414141;
+  font-size: 14px;
+}
+
+#examinfo > span {
+  font-size: 12px;
+  color: #414141;
+  margin-right: 30px;
+}
+
+#examtype {
+  padding: 20px 15px;
+  background-color: #edecec;
+}
+
+#examtype li {
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  width: 110px;
+  text-align: center;
+  line-height: 30px;
+  color: #080808;
+  background-color: #ffffff;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+#examtype li:hover {
+  color: #ffffff;
+  background-color: #e4282c;
+}
+
+#examtype .selected {
+  color: #ffffff;
+  background-color: #e4282c;
+}
+
+#answerarea {
+  margin-top: 230px;
+}
+
+#answerarea > .wrapper {
+  padding: 0 15px;
+}
+
+.wrapper > section {
+  border-bottom: 1px solid #d4d4d4;
+  position: relative;
+}
+
+.wrapper > section section {
+  padding: 5px 0;
+}
+
+.wrapper > section section > .main {
+  padding-left: 25px;
+}
+
+.wrapper > section:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #ffffff;
+  top: 0;
+  height: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.wrapper > section:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  z-index: 99;
+}
+
+.wrapper .textquest .main input {
+  position: static;
+  height: 30px;
+  width: 600px;
+  border: 1px solid #efefef;
+}
+
+.wrapper .perquest .main textarea {
+  position: static;
+  height: 60px;
+  width: 600px;
+  border: 1px solid #efefef;
+}
+
+.wrapper section {
+  padding: 25px 0 25px 20px;
+  box-sizing: border-box;
+}
+
+.wrapper section > .title {
+  font-size: 14px;
+  color: #3d3d3d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wrapper section > .title > .signed {
+  background-color: #e4282c;
+}
+
+.wrapper section > .title a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #c3c3c3;
+}
+
+.wrapper section > .title > b {
+  margin: 0 2px;
+  font-weight: 400;
+  color: #e4282c;
+}
+
+.wrapper section > .title > p {
+  display: inline-block;
+}
+
+.wrapper section > .main {
+  box-sizing: border-box;
+  padding-left: 50px;
+}
+
+.wrapper section > .main > p {
+  position: relative;
+  padding: 5px 10px 5px 30px;
+  cursor: pointer;
+  vertical-align: text-bottom;
+  margin-bottom: 2px;
+}
+
+.wrapper section > .main > p > input {
+  line-height: 18px;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+}
+
+.wrapper section > .main > p > label {
+  line-height: 18px;
+}
+
+.wrapper section > .main > p:hover {
+  background-color: #ffeded;
+}
+
+.wrapper section:hover {
+  background-color: #fff7f7;
+}
+
+.single > nav {
+  display: none;
+}
+
+.single > .footer {
+  display: none;
+}
+
+.typeselect {
+  position: fixed;
+  top: 230px;
+  right: 0;
+  z-index: 999;
+  width: 485px;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-left: 10px solid #ffffff;
+}
+
+.typeselect .header {
+  padding: 10px 15px;
+}
+
+.typeselect .header button {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #e4282c;
+  color: #ffffff;
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+.typeselect .header ul {
+  font-size: 0;
+}
+
+.typeselect .header ul li:nth-of-type(2) span {
+  background-color: #ff8933;
+}
+
+.typeselect .header ul li:nth-of-type(3) span {
+  background-color: #696969;
+}
+
+.typeselect .header ul li:nth-of-type(4) span {
+  background-color: #eb6877;
+}
+
+.typeselect .header ul li {
+  width: 50%;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #4c4c4c;
+  display: inline-block;
+}
+
+.typeselect .header ul li span {
+  height: 12px;
+  width: 12px;
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.typeselect nav ul {
+  border-bottom: 1px solid #424242;
+  background-color: #e1e1e1;
+  color: #424242;
+  font-size: 14px;
+  line-height: 33px;
+}
+
+.typeselect nav ul .selected {
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.typeselect nav ul li {
+  display: inline-block;
+  padding: 0 10px;
+  cursor: pointer;
+  height: 33px;
+}
+
+.typeselect nav ul li:hover {
+  background-color: #424242;
+  color: #ffffff;
+}
+
+.typeselect .footer ul {
+  padding: 20px 15px 0;
+}
+
+.typeselect .footer ul li {
+  margin-bottom: 15px;
+}
+
+.typeselect .footer ul li h2 {
+  color: #424242;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.typeselect .footer ul li span {
+  height: 25px;
+  width: 25px;
+  line-height: 25px;
+  display: inline-block;
+  text-align: center;
+  background-color: #424242;
+  font-size: 14px;
+  color: #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.typeselect .footer ul li > .finshed {
+  background-color: #ff8933;
+}
+
+.typeselect .footer ul li > .signed {
+  background-color: #eb6877;
+}

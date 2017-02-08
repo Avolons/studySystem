@@ -1,0 +1,324 @@
+.content {
+  width: 1200px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+#fix-header {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+#header {
+  position: relative;
+}
+
+#header > .title {
+  font-size: 30px;
+  color: #414141;
+  line-height: 70px;
+  text-align: center;
+}
+
+#header > p {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 12px;
+  text-align: center;
+  color: #7f7f7f;
+}
+
+#scorearea {
+  width: 1200px;
+  margin: 0 auto;
+  border-top: 1px dashed #c3c3c3;
+  padding: 15px 0;
+}
+
+#scorearea > .allscore {
+  float: left;
+  height: 300px;
+  width: 300px;
+  border: 1px solid #cec8c8;
+  box-sizing: border-box;
+}
+
+#scorearea > .allscore h2 {
+  font-weight: 400;
+  width: 100%;
+  height: 65px;
+  line-height: 65px;
+  color: #2a2a2a;
+  font-size: 18px;
+  text-indent: 35px;
+}
+
+#scorearea > .allscore h3 {
+  font-weight: 400;
+  background-color: #fbfaf7;
+  height: calc(100% - 65px);
+  text-align: center;
+  color: #2a2a2a;
+  font-size: 18px;
+}
+
+#scorearea > .allscore h3 > span {
+  text-align: left;
+  color: #2a2a2a;
+  font-size: 18px;
+  text-indent: 35px;
+  display: block;
+  height: 65px;
+  line-height: 65px;
+}
+
+#scorearea > .allscore h3 > b {
+  font-weight: 200;
+  color: #efb116;
+  font-size: 185px;
+  line-height: 130px;
+}
+
+#scorearea > .scoreList {
+  height: 300px;
+  width: 880px;
+  float: right;
+  box-sizing: border-box;
+  border: 1px solid #d2d2d2;
+  border-right: none;
+  background-color: #f6f6f6;
+}
+
+#scorearea > .scoreList > ul {
+  height: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+#scorearea > .scoreList > ul > li {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  height: 100%;
+  box-sizing: border-box;
+  border-right: 1px solid #d2d2d2;
+}
+
+#scorearea > .scoreList > ul > li > ul {
+  height: 100%;
+}
+
+#scorearea > .scoreList > ul > li li {
+  text-align: center;
+  height: 20%;
+  font-size: 18px;
+  line-height: 60px;
+  height: 60px;
+  color: #2a2a2a;
+}
+
+#scorearea > .scoreList > ul > li :nth-of-type(4),
+#scorearea > .scoreList > ul > li li:nth-of-type(2) {
+  background-color: #ffffff;
+}
+
+#scorearea > .scoreList > ul > li:first-of-type {
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  width: 160px;
+}
+
+#examtype ul {
+  padding: 15px;
+  background-color: #edecec;
+}
+
+#examtype .top-fixed {
+  position: fixed;
+  top: 0;
+  width: 1170px;
+  z-index: 999;
+}
+
+#examtype li {
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  width: 110px;
+  text-align: center;
+  line-height: 30px;
+  color: #080808;
+  background-color: #ffffff;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+#examtype li:hover {
+  color: #ffffff;
+  background-color: #efb116;
+}
+
+#examtype .selected {
+  color: #ffffff;
+  background-color: #efb116;
+}
+
+.wrapper > section {
+  border-bottom: 1px solid #d4d4d4;
+  position: relative;
+}
+
+.wrapper > section section {
+  padding: 5px 0;
+}
+
+.wrapper > section section > .main {
+  padding-left: 70px;
+}
+
+.wrapper > section:after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #ffffff;
+  top: 0;
+  height: 10px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.wrapper > section:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  z-index: 99;
+}
+
+.wrapper .textquest .main p {
+  padding-left: 0;
+}
+
+.wrapper .textquest .main input {
+  position: static;
+  height: 30px;
+  width: 600px;
+  box-sizing: border-box;
+  padding-left: 5px;
+  border: 1px solid #efefef;
+}
+
+.wrapper .perquest .main aside {
+  padding: 2.5px 5px;
+  color: #2faa2c;
+  font-size: 14px;
+  border: 1px solid #2faa2c;
+  display: inline-block;
+}
+
+.wrapper .perquest .main p {
+  padding-left: 0;
+}
+
+.wrapper .perquest .main textarea {
+  box-sizing: border-box;
+  padding: 5px;
+  position: static;
+  height: 60px;
+  width: 600px;
+  border: 1px solid #efefef;
+}
+
+.wrapper .perquest .main textarea:disabled {
+  background-color: #f2f2f2;
+}
+
+.wrapper section {
+  padding: 25px 0 25px 20px;
+  box-sizing: border-box;
+}
+
+.wrapper section > .title {
+  font-size: 14px;
+  color: #3d3d3d;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.wrapper section > .title > .signed {
+  background-color: #e4282c;
+}
+
+.wrapper section > .title a {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background-color: #c3c3c3;
+}
+
+.wrapper section > .title > b {
+  display: inline-block;
+  width: 70px;
+  font-weight: 400;
+  color: #e4282c;
+}
+
+.wrapper section > .title > p {
+  display: inline-block;
+}
+
+.wrapper section > .main {
+  box-sizing: border-box;
+  padding-left: 70px;
+}
+
+.wrapper section > .main > p {
+  position: relative;
+  padding: 5px 10px 5px 30px;
+  cursor: pointer;
+  vertical-align: text-bottom;
+  margin-bottom: 2px;
+}
+
+.wrapper section > .main > p > input {
+  line-height: 18px;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+
+.wrapper section > .main > p > label {
+  line-height: 18px;
+}
+
+.wrapper section > .main > aside {
+  margin-top: 10px;
+}
+
+.wrapper section > .main > aside > span {
+  display: inline-block;
+  padding: 2.5px 5px;
+  font-size: 14px;
+  margin-right: 30px;
+}
+
+.wrapper section > .main > aside > span > span {
+  color: #2faa2c;
+  font-weight: 700;
+}
+
+.wrapper section > .main > aside > .falseanswer {
+  color: #e4282c;
+  border: 1px solid #e4282c;
+}
+
+.wrapper section > .main > aside > .trueanswer {
+  color: #2faa2c;
+  border: 1px solid #2faa2c;
+}

@@ -100,10 +100,10 @@ var App = new Vue({
     mounted: function() {
         var index = layer.load(0);
         //模拟的假数据
-        this.$http.get("http://192.168.1.5/home/GetUserExamChart").then((data) => {
+        this.$http.get("http://192.168.1.102/home/GetUserExamChart").then((data) => {
             this.scoreList = data.body;
             this.topSel();
-            this.$http.get("http://192.168.1.5/home/GetExamInfoHaveAnswer").then((data) => {
+            this.$http.get("http://192.168.1.102/home/GetExamInfoHaveAnswer").then((data) => {
                 this.qstData = data.body;
                 this.listFormatting(this.qstData.QuestionsItems);
                 layer.close(index);
